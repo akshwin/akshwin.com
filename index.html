@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website </title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- custom css -->
+    <style>
+    
+  </style>
+
+  
+</head>
+
+<body>
+
+
+ 
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (light)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- NAVBAR -->
+
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar navbar-custom">
+    
+  
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><strong>AKSHWIN T </strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assets/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href = "./assets/pages/portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href = "./assets/pages/blog.html">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Follow Me </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://www.linkedin.com/in/akshwin/">Linkedin</a></li>
+            <li><a class="dropdown-item" href="https://twitter.com/akshwin_2003">Twitter</a></li>
+            <li><a class="dropdown-item" href="https://www.instagram.com/the_akshwin/">Instagram</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+<br>
+<br>
+
+
+<!-- IMAGE -->
+
+<article class="wrapper">
+  <h1> Hello Everyone !! WELCOME TO MY WEBSITE    </h1>
+</article>
+
+<!-- ABOUT -->
+<div class="container my-5">
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Hello Everyone!!👋👋 </h1>
+      <br>
+      <p class="lead"> I'm Akshwin , dedicated student at VIT Vellore, fueled by a deep passion for machine learning and programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in coding, data analysis, and AI. </p>
+      <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and work towards becoming a proficient machine learning engineer.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+        <a href="./assets/pages/about.html">
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me ...</button>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src="./assets/images/latest1.jpg" alt="" width="500" height="500">
+    </div>
+  </div>
+</div>
+
+  <!-- PORTFOLIO-->
+
+  
+<div class ='container'>
+<div class="album py-5 bg-body-tertiary">
+  
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./assets/images/data_science.jpg" alt="">
+
+          <div class="card-body">
+            <p class="card-text"> "Welcome to the exciting realm of Data Science ! Join me in journey to expertise in Python, machine learning, and statistics. Dedicated to unraveling data complexities and generating actionable insights to drive informed decision-making and innovation."</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="./assets/pages/data_science.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./assets/images/web.avif" alt="">
+          <div class="card-body">
+            <p class="card-text">"Welcome to the exciting realm of web development! Join me on a journey to master HTML, CSS, JavaScript, and beyond, crafting stunning and functional websites that shape the digital landscape which turn can turn ideas into reality."</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="./assets/pages/web.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ... </button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./assets/images/java.jpg" alt="">
+          <div class="card-body">
+            <p class="card-text">
+              "Hello, I'm an aspiring programmer dedicated to mastering the art of coding. My passion lies in crafting efficient and creative solutions to real-world problems through programming and making machines work . I'm proficient in C , C++ , Java and Python ."" </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="./assets/pages/coding.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- BOOKS-->
+
+
+<div class="container my-5">
+  <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <h1 class="text-body-emphasis">“ Books are a uniquely portable magic. ” </h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+<code> - Stephen King   </code> 
+    </p>
+    <div class="d-inline-flex gap-2 mb-5">
+     
+      <a href="./assets/pages/books.html">
+        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+          See my favourite books that  I read !!
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- EDUCATION TIMELINE -->
+
+<h1 > Education and Experience</h1>
+<h1>         ------</h1>
+<div class = "container">
+<section style="background-color: #F0F2F5;">
+  <div class="container py-5">
+    <div class="main-timeline-2">
+      <div class="timeline-2 left-2">
+        <div class="card">
+          <img src="./assets/images/vkv.jpg" alt="">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">Vivekanada Kendra Vidyalaya</h4>
+            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2003 - 2018</p>
+            <p class="mb-0">
+              "I grew in Kanyakumari and received my education at Vivekananda Kendra Vidyalaya, where I demonstrated my academic excellence by achieving the top position in my class during the 10th grade, with an impressive score of 95.4%."</p>
+            <p class = "mb-0"> "I acquired proficiency in martial arts, including karate and nunchuks, and achieved success by earning medals in state-level tournaments."</p>
+  
+          </div>
+        </div>
+      </div>
+      <div class="timeline-2 right-2">
+        <div class="card">
+          <img src="./assets/images/amrita.png" class="card-img-top"
+            alt="Responsive image">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">Amrita Vidyalayam</h4>
+            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2019-2020</p>
+            <p class="mb-0">"I completed my Higher Secondary Education in the Computer Science stream at Amrita Vidyalayam, achieving a remarkable 95.8% in my examinations. During this period, I embarked on learning Python and MySQL."</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-2 left-2">
+        <div class="card">
+          <img src="./assets/images/vit.avif" class="card-img-top"
+            alt="Responsive image">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">Vellore instituteof Technology , Vellore</h4>
+            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2021-2025</p>
+            <p class="mb-0">"I am presently enrolled in a Computer Science and Engineering program at Vellore Institute of Technology, pursuing my Bachelor's degree. My programming skills encompass C, C++, Java, and Python, while I have also delved deep into fundamental Computer Science concepts, including Operating Systems, Networks, Database Management Systems, and Object-Oriented Programming. Moreover, I have cultivated a strong interest in Data Science, actively working on this domain for future"  </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+</div>
+<br>
+
+
+
+<!-- BLOG POST SECTION-->
+<div class = 'container'>
+
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Welcome to my blog THE DIVERSE CORNER !!</h2>
+        <br>
+        <p class="lead">Join me on a journey of exploration as I delve into diverse topics, share insights, and spark meaningful discussions. Stay tuned for captivating content!</p>
+        <p class="lead mb-0"><a href="./assets/pages/diverse_corner.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+      </div>
+      <div class="col-md-5">
+        <a href="./assets/pages/diverse_corner.html">
+        <img src="./assets/images/tdc.png" alt="" height  = 200px width="250">
+      </a>
+      </div>      
+    </div>
+  </div>
+</div>  
+
+
+<!-- CONTACT -->
+
+
+
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Twitter -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #55acee;"
+        href="https://twitter.com/akshwin_2003"
+        role="button"
+        ><i class="fab fa-twitter">Twitter</i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="https://www.instagram.com/the_akshwin/"
+        role="button"
+        ><i class="fab fa-instagram">Instagram</i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/in/akshwin/"
+        role="button"
+        ><i class="fab fa-linkedin-in">Linkedin</i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333;"
+        href="https://github.com/akshwin"
+        role="button"
+        ><i class="fab fa-github">Github</i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright Akshwin 
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
