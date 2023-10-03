@@ -4,16 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio website </title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- custom css -->
     <style>
+
+      /* */.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  /* The actual timeline (the vertical ruler) */
+.main-timeline-2 {
+    position: relative;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #26c6da;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-2 {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: #26c6da;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left-2 {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right-2 {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-2::after {
+    left: -14px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline-2::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .timeline-2 {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-2::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left-2::after,
+    .right-2::after {
+      left: 18px;
+    }
+  
+    .left-2::before {
+      right: auto;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right-2 {
+      left: 0%;
+    }
+  }
+
     
   </style>
 
   
 </head>
+
 <body>
 
 
@@ -67,6 +198,7 @@
 
   <!-- NAVBAR -->
 
+  
   <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar navbar-custom">
     
   
@@ -78,10 +210,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            <a class="nav-link " aria-current="page" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./assets/pages/about.html">About</a>
+            <a class="nav-link active" href="./assets/pages/about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href = "./assets/pages/portfolio.html">Portfolio</a>
@@ -107,16 +239,7 @@
 <br>
 
 
-<!-- IMAGE -->
-
-<article class="wrapper">
-  <h1> Hello Everyone !! WELCOME TO MY WEBSITE 
-
-  </h1>
-</article>
-
 <!-- ABOUT -->
-
 <div class="container my-5">
   <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
@@ -125,7 +248,7 @@
       <p class="lead"> I'm Akshwin , dedicated student at VIT Vellore, fueled by a deep passion for machine learning and programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in coding, data analysis, and AI. </p>
       <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and work towards becoming a proficient machine learning engineer.</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <a href="./assets/pages/about.html">
+        <a href="./images/images/latest1.jpg">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me ...</button>
         </a>
       </div>
@@ -136,69 +259,8 @@
   </div>
 </div>
 
-
-<!-- PORTFOLIO-->
-
-<div class ='container'>
-<div class="album py-5 bg-body-tertiary">
-  
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="./assets/images/data_science.jpg" alt="">
-
-          <div class="card-body">
-            <p class="card-text"> "Welcome to the exciting realm of Data Science ! Join me in journey to expertise in Python, machine learning, and statistics. Dedicated to unraveling data complexities and generating actionable insights to drive informed decision-making and innovation."</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="./assets/pages/data_science.html">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
-              </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="./assets/images/web.avif" alt="">
-          <div class="card-body">
-            <p class="card-text">"Welcome to the exciting realm of web development! Join me on a journey to master HTML, CSS, JavaScript, and beyond, crafting stunning and functional websites that shape the digital landscape which turn can turn ideas into reality."</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="./assets/pages/web.html">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ... </button>
-              </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="./assets/images/java.jpg" alt="">
-          <div class="card-body">
-            <p class="card-text">
-              "Hello, I'm an aspiring programmer dedicated to mastering the art of coding. My passion lies in crafting efficient and creative solutions to real-world problems through programming and making machines work . I'm proficient in C , C++ , Java and Python ."" </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="./assets/pages/coding.html">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
-              </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
 <!-- BOOKS-->
+
 
 <div class="container my-5">
   <div class="p-5 text-center bg-body-tertiary rounded-3">
@@ -216,6 +278,8 @@
     </div>
   </div>
 </div>
+
+
 
 <!-- EDUCATION TIMELINE -->
 
@@ -267,8 +331,9 @@
 </div>
 <br>
 
-<!-- BLOG POST SECTION-->
 
+
+<!-- BLOG POST SECTION-->
 <div class = 'container'>
 
   <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
@@ -290,6 +355,8 @@
 
 
 <!-- CONTACT -->
+
+
 
 
 <!-- FOOTER -->
@@ -350,7 +417,7 @@
   <!-- Copyright -->
 </footer>
 
-<!--  JAVASCRIPT -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
