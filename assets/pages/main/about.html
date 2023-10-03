@@ -4,151 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio website </title>
-    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- custom css -->
-    <style>
-
-      /* */.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-
-  /* The actual timeline (the vertical ruler) */
-.main-timeline-2 {
-    position: relative;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .main-timeline-2::after {
-    content: "";
-    position: absolute;
-    width: 3px;
-    background-color: #26c6da;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .timeline-2 {
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .timeline-2::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -11px;
-    background-color: #26c6da;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left-2 {
-    padding: 0px 40px 20px 0px;
-    left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right-2 {
-    padding: 0px 0px 20px 40px;
-    left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left-2::before {
-    content: " ";
-    position: absolute;
-    top: 18px;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right-2::before {
-    content: " ";
-    position: absolute;
-    top: 18px;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right-2::after {
-    left: -14px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-    /* Place the timelime to the left */
-    .main-timeline-2::after {
-      left: 31px;
-    }
-  
-    /* Full-width containers */
-    .timeline-2 {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-  
-    /* Make sure that all arrows are pointing leftwards */
-    .timeline-2::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-  
-    /* Make sure all circles are at the same spot */
-    .left-2::after,
-    .right-2::after {
-      left: 18px;
-    }
-  
-    .left-2::before {
-      right: auto;
-    }
-  
-    /* Make all right containers behave like the left ones */
-    .right-2 {
-      left: 0%;
-    }
-  }
-
-    
+    <style>    
   </style>
 
-  
 </head>
-
 <body>
-
-
- 
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -210,16 +74,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+            <a class="nav-link " aria-current="page" href="/My_Personal portfolio/Personal_Portfolio/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./assets/pages/about.html">About</a>
+            <a class="nav-link active" href="./about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href = "./assets/pages/portfolio.html">Portfolio</a>
+            <a class="nav-link" href = "./portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href = "./assets/pages/blog.html">Blog</a>
+            <a class="nav-link" href = "./blog.html">Blog</a>
           </li>
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Follow Me </a>
@@ -248,13 +112,14 @@
       <p class="lead"> I'm Akshwin , dedicated student at VIT Vellore, fueled by a deep passion for machine learning and programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in coding, data analysis, and AI. </p>
       <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and work towards becoming a proficient machine learning engineer.</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <a href="./images/images/latest1.jpg">
+
+        <a href="./about.html">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me ...</button>
         </a>
       </div>
     </div>
     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3" src="./assets/images/latest1.jpg" alt="" width="500" height="500">
+        <img class="rounded-lg-3" src="./images/images/latest1.jpg" alt="" width="500" height="500">
     </div>
   </div>
 </div>
@@ -270,7 +135,7 @@
     </p>
     <div class="d-inline-flex gap-2 mb-5">
      
-      <a href="./assets/pages/books.html">
+      <a href="./books.html">
         <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
           See my favourite books that  I read !!
         </button>
@@ -291,7 +156,7 @@
     <div class="main-timeline-2">
       <div class="timeline-2 left-2">
         <div class="card">
-          <img src="./assets/images/vkv.jpg" alt="">
+          <img src="./images/images/vkv.jpg" alt="">
           <div class="card-body p-4">
             <h4 class="fw-bold mb-4">Vivekanada Kendra Vidyalaya</h4>
             <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2003 - 2018</p>
@@ -304,7 +169,7 @@
       </div>
       <div class="timeline-2 right-2">
         <div class="card">
-          <img src="./assets/images/amrita.png" class="card-img-top"
+          <img src="./images/images/amrita.png" class="card-img-top"
             alt="Responsive image">
           <div class="card-body p-4">
             <h4 class="fw-bold mb-4">Amrita Vidyalayam</h4>
@@ -315,7 +180,7 @@
       </div>
       <div class="timeline-2 left-2">
         <div class="card">
-          <img src="./assets/images/vit.avif" class="card-img-top"
+          <img src="./images/images/vit.avif" class="card-img-top"
             alt="Responsive image">
           <div class="card-body p-4">
             <h4 class="fw-bold mb-4">Vellore instituteof Technology , Vellore</h4>
@@ -342,11 +207,11 @@
         <h2 class="featurette-heading fw-normal lh-1">Welcome to my blog THE DIVERSE CORNER !!</h2>
         <br>
         <p class="lead">Join me on a journey of exploration as I delve into diverse topics, share insights, and spark meaningful discussions. Stay tuned for captivating content!</p>
-        <p class="lead mb-0"><a href="./assets/pages/diverse_corner.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+        <p class="lead mb-0"><a href="./blog.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
       </div>
       <div class="col-md-5">
-        <a href="./assets/pages/diverse_corner.html">
-        <img src="./assets/images/tdc.png" alt="" height  = 200px width="250">
+        <a href="./blog.html">
+        <img src="./images/images/tdc.png" alt="" height  = 200px width="250">
       </a>
       </div>      
     </div>

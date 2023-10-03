@@ -1,7 +1,5 @@
 /* TIMELINE*/
 
-<style>
-
       /* */.container {
   position: relative;
   text-align: center;
@@ -233,15 +231,9 @@ body {
 /* DATA SCINCE */
 
 .text-body-secondary {
-  --bs-text-opacity: 30;
-  color: rgb(7 8 9 / 75%)!important;
+  --bs-text-opacity: 0;
+  color: #212529 !important;
 }
-
-
-
-
-
-
 
 
 
