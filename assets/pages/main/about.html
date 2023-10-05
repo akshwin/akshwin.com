@@ -8,12 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- custom css -->
-    <style>    
+    <style>
   </style>
 
+  
 </head>
 <body>
-
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
@@ -62,10 +62,7 @@
 
   <!-- NAVBAR -->
 
-  
   <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar navbar-custom">
-    
-  
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><strong>AKSHWIN T </strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,22 +95,29 @@
 
     </div>
   </nav>
+<!-- IMAGE -->
+<!-- 
+<article class="wrapper">
+  <h1> Hello Everyone !! WELCOME TO MY WEBSITE 
 
-<br>
-<br>
-
+  </h1>
+</article> -->
 
 <!-- ABOUT -->
+
+<div class = "title">
+  <h1> ABOUT ME </h1>
+  <h4>----------------</h4>
+  </div>  
 <div class="container my-5">
   <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
       <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Hello Everyone!!👋👋 </h1>
-      <br>
+    <br>
       <p class="lead"> I'm Akshwin , dedicated student at VIT Vellore, fueled by a deep passion for machine learning and programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in coding, data analysis, and AI. </p>
       <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and work towards becoming a proficient machine learning engineer.</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-
-        <a href="./about.html">
+        <a href="./assets/pages/main/about.html">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me ...</button>
         </a>
       </div>
@@ -124,32 +128,77 @@
   </div>
 </div>
 
-<!-- BOOKS-->
+<br>
+<!-- PORTFOLIO-->
 
+<div class = "title">
+  <h1>MY PORTFOLIO  </h1>
+  <h2>----------------</h2>
+  </div>
+<div class ='container'>
+<div class="album py-5 bg-body-tertiary">
+  
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./images/data_science.jpg" alt="">
 
-<div class="container my-5">
-  <div class="p-5 text-center bg-body-tertiary rounded-3">
-    <h1 class="text-body-emphasis">“ Books are a uniquely portable magic. ” </h1>
-    <p class="col-lg-8 mx-auto fs-5 text-muted">
-<code> - Stephen King   </code> 
-    </p>
-    <div class="d-inline-flex gap-2 mb-5">
-     
-      <a href="./books.html">
-        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-          See my favourite books that  I read !!
-        </button>
-      </a>
+          <div class="card-body">
+            <p class="card-text"> "Welcome to the exciting realm of Data Science ! Join me in journey to expertise in Python, machine learning, and statistics. Dedicated to unraveling data complexities and generating actionable insights to drive informed decision-making and innovation."</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="./assets/pages/portfolio/data_science.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./images/images/web.avif" alt="">
+          <div class="card-body">
+            <p class="card-text">"Welcome to the exciting realm of web development! Join me on a journey to master HTML, CSS, JavaScript, and beyond, crafting stunning and functional websites that shape the digital landscape which turn can turn ideas into reality."</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="./assets/pages/portfolio/web.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ... </button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./images/images/java.jpg" alt="">
+          <div class="card-body">
+            <p class="card-text">
+              "Hello, I'm an aspiring programmer dedicated to mastering the art of coding. My passion lies in crafting efficient and creative solutions to real-world problems through programming and making machines work . I'm proficient in C , C++ , Java and Python ."" </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="assets/pages/portfolio/coding.html">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View my work ...</button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 </div>
-
-
+</div>
 
 <!-- EDUCATION TIMELINE -->
+<div class = "title">
+  <h1> EDUCATON </h1>
+  <h2>----------------</h2>
+  </div>
 
-<h1 > Education and Experience</h1>
-<h1>         ------</h1>
 <div class = "container">
 <section style="background-color: #F0F2F5;">
   <div class="container py-5">
@@ -195,10 +244,14 @@
 </section>
 </div>
 <br>
-
-
+<!-- EXPERIENCE AND ACEIVEMENTS -->
 
 <!-- BLOG POST SECTION-->
+
+<div class = "title">
+  <h1>THE DIVERSE CORNER</h1>
+  <h1>----------------</h1>
+  </div>
 <div class = 'container'>
 
   <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
@@ -207,10 +260,10 @@
         <h2 class="featurette-heading fw-normal lh-1">Welcome to my blog THE DIVERSE CORNER !!</h2>
         <br>
         <p class="lead">Join me on a journey of exploration as I delve into diverse topics, share insights, and spark meaningful discussions. Stay tuned for captivating content!</p>
-        <p class="lead mb-0"><a href="./blog.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+        <p class="lead mb-0"><a href="./assets/pages/main/blog.html" class="text-body-emphasis fw-bold"> CONTINUE READING ...</a></p>
       </div>
       <div class="col-md-5">
-        <a href="./blog.html">
+        <a href="./assets/pages/main/blog.html">
         <img src="./images/images/tdc.png" alt="" height  = 200px width="250">
       </a>
       </div>      
@@ -220,8 +273,6 @@
 
 
 <!-- CONTACT -->
-
-
 
 
 <!-- FOOTER -->
@@ -282,7 +333,7 @@
   <!-- Copyright -->
 </footer>
 
-
+<!--  JAVASCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
