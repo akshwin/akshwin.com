@@ -10,6 +10,38 @@
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- custom css -->
     <style>
+
+header {
+    height: 120px;
+}
+header h1 {
+    float: left;
+    margin-top: 32px;
+}
+header h1 .color {
+    color: black;
+}
+header nav {
+    float: right;
+}
+header nav ul li {
+    float: left;
+    display: inline-block;
+    margin-top: 50px;
+}
+header nav ul li a {
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-right: 20px;
+}
+a {
+  text-decoration: none;
+}
+.text-center{
+  color: black;
+}
     </style>
 </head>
 
@@ -61,7 +93,7 @@
   </div>
 
 <!-- NAVBAR -->
-
+<!-- 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar navbar-custom">
     <div class="container-fluid">
       <img src="./assets/images/AK-logo.png" alt=""height =45 width = 45>
@@ -92,7 +124,22 @@
       </div>
     </div>
   </nav>
-  <br>
+  <br> -->
+
+  <header>
+    <div class = 'container'>
+        <h1> <img src="./assets/images/AK-logo.png" alt=""height =70 width = 70><span class="color">Akshwin</span></h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="assets/pages/main/about.html">About</a></li>
+                <li><a href="./assets/pages/main/portfolio.html">portfolio</a></li>
+                <li><a href="https://www.linkedin.com/in/akshwin/">Contact</a></li>
+            </ul>
+          </nav>
+        </div> 
+</header> 
+
 
 <!-- ABOUT -->
 
@@ -245,7 +292,7 @@
 
 <!-- FOOTER -->
 
-<footer class="bg-dark text-center text-white">
+<footer class="bg-light text-center text-white" >
   <p class="float-end mb-1">
     <a href="./index.html">⬆️</a>
   </p>
@@ -292,7 +339,7 @@
   </div>
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3" style="background-color:#F0F2F5;">
     © 2023 Copyright Akshwin 
   </div>
 </footer>
