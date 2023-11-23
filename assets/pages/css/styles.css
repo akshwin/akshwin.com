@@ -1,3 +1,5 @@
+
+/* CSS FOR HEADER  */ 
 .text-body-secondary {
     --bs-text-opacity: 0;
     color: #212529 !important;
@@ -34,8 +36,6 @@ header a{
 .text-center{
   color: black;
 }
-
-
 
 /* TIMELINE*/
 
@@ -262,7 +262,6 @@ header a{
         }
       }
       
-      
       .navbar-inner {
         background:transparent;
       }
@@ -278,14 +277,8 @@ header a{
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
+  
+/* CSS FOR TIMELINE*/
       body {
         color: #213546;
         background: #ffffff;
@@ -555,4 +548,14 @@ header a{
           left: 30px;
           margin-left: 0;
         }
+      }
+
+
+
+      .col-lg-6 h1{
+        color: black;
+      }
+
+      .col-lg-7 h1{
+        color: black;
       }
