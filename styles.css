@@ -42,7 +42,7 @@ header a{
       /* */.container {
         position: relative;
         text-align: center;
-        color: white;
+        color: black;
       }
       .centered {
           position: absolute;
@@ -559,3 +559,8 @@ header a{
       .col-lg-7 h1{
         color: black;
       }
+
+  
+
+
+      
