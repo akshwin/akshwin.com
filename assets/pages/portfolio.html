@@ -7,21 +7,24 @@
     <title> Portfolio</title>
     <style>
     </style>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/2_FULL STACK WEB DEVELOPMENT/2_Front_End_Development_Projects/Personal_Portfolio/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
+
 <!-- NAVBAR -->
+
 <header>
   <div class = 'container'>
-      <h1> <img src="/Personal_Portfolio/assets/images/AK-logo.png" alt=""height =70 width = 70><span class="color">Akshwin</span></h1>
+      <h1> <img src="../images/AK-logo.png" alt=""height =70 width = 70><span class="color">Portfolio</span></h1>
       <nav>
           <ul>
-              <li><a href="/Personal_Portfolio/index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./portfolio.html">Portfolio</a></li>
-              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./portfolio.html">Home</a></li>
+              <li><a href="./portfolio/ml.html">ML</a></li>
+              <li><a href="./portfolio/ml_apps.html">ML APPS</a></li>
+              <li><a href="./portfolio/cv.html">CV</a></li>
+              <li><a href="./portfolio/nlp.html">NLP</a></li>
           </ul>
         </nav>
       </div> 
@@ -34,8 +37,7 @@
     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
       <h1> Welcome to My Portfolio 🧑‍💻🧑‍💻</h1>
       <br>
-      <p class="lead"> Dive into my digital realm where data science, web development, and Java programming converge. As a passionate explorer of these dynamic domains, I present a collection of projects that showcase the synergy between analytical prowess and coding finesse. From unraveling insights in data sets to crafting seamless web experiences and diving into the intricacies of Java, this portfolio is a journey through the intersection of innovation and technology. </p>
-      <p class = "lead"> Join me in this visual narrative, where every line of code tells a story. Let's explore the data-driven, web-enabled, and Java-powered landscape together. Welcome, and enjoy the expedition!</p>
+      <p class="lead"> Grretings!!. Within this digital canvas, discover my journey and expertise in Data Science. My workreflects a commitment to innovation and precision. I thrive on challenges, continuously learning and pushing boundaries. Let's connect, collaborate, and explore the possibilities. Feel free to explore my projects, delve into my blog for insights, and drop a message for inquiries. Thank you for visiting—exciting ventures await!</p>
       <br>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
         <a href="https://github.com/akshwin">
@@ -44,23 +46,26 @@
       </div>
     </div>
     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3" src="/Personal_Portfolio/assets/images/portfolio.webp" alt="" width="550" height="550">
+        <img class="rounded-lg-3" src="../images/main.jpg" alt="" width="560" height="470">
     </div>
   </div>
 </div>
 
+<!--PROJECT SECTIONs -->
+
+<!-- ML PROJECTS -->
 
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/Personal_Portfolio/assets/images/data_science.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      <img src="../images/ml.avif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <div class="col-lg-6">
-      <h1>Data Science </h1>
+      <h1>ML Projects </h1>
       <p class="lead">
         "Embark on a journey through the data-driven cosmos, where insights unfold and patterns emerge. As a passionate data scientist, I invite you to explore the narratives encoded in every dataset. Let's unravel stories together in this realm of analytics and discovery."
       </p>
-        <a href="../portfolio/data_science.html">
+        <a href="../pages/portfolio/ml.html">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="ebrn2o">Explore my work ... </button>
       </a>
       </div>
@@ -68,16 +73,18 @@
   </div>
 </div>
 
+<!-- ML APPS PROJECTS -->
+
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/Personal_Portfolio/assets/images/web.avif" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      <img src="../images/mlapps.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <div class="col-lg-6">
-      <h1>Web Development</h1>
+      <h1>ML Apps</h1>
       <p class="lead">
         "Step into a digital universe where lines of code shape user experiences. As a web developer, I craft interactive stories in pixels. Join me in exploring the art of web creation. Welcome to the code-driven canvas!"</p>
-        <a href="../portfolio/web.html">
+        <a href="../pages/portfolio/ml_apps.html">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="ebrn2o">Explore my work... </button>
       </a>
       </div>
@@ -85,26 +92,45 @@
   </div>
 </div>
 
+<!-- CV PROJECTS -->
+
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/Personal_Portfolio/assets/images/java.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" >
+      <img src="../images/cv.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" >
     </div>
     <div class="col-lg-6">
-      <h1> Java Programming</h1>
+      <h1> CV Projects</h1>
       <p class="lead">
         "In the symphony of logic and algorithms, I craft solutions that transcend challenges. As a fervent programmer, join me in navigating the intricate dance of code. Let's explore the limitless possibilities of the digital realm together. "</p>
-        <a href="../portfolio/coding.html">
+        <a href="../pages/portfolio/cv.html">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="ebrn2o">Explore my work ... </button>
       </a>
       </div>
     </div>
   </div>
 </div>
-<br>
+
+<!-- NLP PROJECTS -->
+
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="../images/nlp.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1>NLP Projects</h1>
+      <p class="lead">
+        "Step into a digital universe where lines of code shape user experiences. As a web developer, I craft interactive stories in pixels. Join me in exploring the art of web creation. Welcome to the code-driven canvas!"</p>
+        <a href="../pages/portfolio/nlp.html">
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="ebrn2o">Explore my work... </button>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
-
 
 <footer class="bg-light text-center text-white" >
   <p class="float-end mb-1">
