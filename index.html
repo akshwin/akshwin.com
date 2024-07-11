@@ -1,155 +1,425 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home </title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <!-- custom css -->
-    <style>
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Akshwin </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
-<body>
-<!-- NAVBAR -->
-  <header>
-    <div class = 'container'>
-        <h1> <img src="./assets/images/AK-logo.png" alt=""height =70 width = 70><span class="color">Akshwin T</span></h1>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./portfolio.html">portfolio</a></li>
-                <li><a href="https://linktr.ee/akshwin.com">Contact</a></li>
-            </ul>
-          </nav>
-        </div> 
-  </header> 
+<!-- HYPER LINK  BAR -->
+<body class="index-page">
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- ABOUT -->
+<main class="main">
 
-<div class="container my-5">
-  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-      <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Hello Everyone!!👋👋 </h1>
-    <br>
-      <p class="lead"> I'm Akshwin , Undergrad Student at VIT Vellore, with a deep passion for Artificial Intelligence and Programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in coding, data analysis, and AI. </p>
-      <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and get connected to link minded people.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <a href="./about.html">
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me ...</button>
-        </a>
-      </div>
-    </div>
-    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3" src="./assets/images/latest1.jpg" alt="" width="500" height="500">
-    </div>
-  </div>
-</div>
-
-<!-- EDUCATION TIMELINE -->
-
-<div class = "container">
-<section style="background-color: #F0F2F5;">
-  <div class="container py-5">
-    <div class="main-timeline-2">
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img src="./assets/images/vkv.jpg" alt="">
-          <div class="card-body p-4">
-            <h4 class="fw-bold mb-4">Vivekanada Kendra Vidyalaya</h4>
-            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2003 - 2018</p>
-            <p class="mb-0">"I grew in Kanyakumari and pursued my education at Vivekananda Kendra Vidyalaya, where I demonstrated my academic excellence by achieving the top position in my school during the 10th grade, with an impressive score of 95.4%."</p>
-            <p class = "mb-0"> "I acquired proficiency in martial arts, including karate and nunchuks, and achieved success by earning medals in state-level tournaments."</p>
+<!-- Hero Section -->
+  <section id="hero" class="hero section light-background">
+    <img src="assets/img/hero-bg.jpg" alt="">
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h1>Welcome to My Website </h1>
+            <h2>Akshwin T </h2>
+            <p>I'm <span class="typed" data-typed-items="CS Undergrad , Java Programmer , Front End Developer , AI Engineer , Computer Vision Engineer "></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <div class="social-links">
+              <a href="https://x.com/akshwin_2003"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://github.com/akshwin "><i class="bi bi-github"></i></a>
+              <a href="https://www.instagram.com/the_akshwin/"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/akshwin/"><i class="bi bi-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img src="./assets/images/amrita.png" class="card-img-top"
-            alt="Responsive image">
-          <div class="card-body p-4">
-            <h4 class="fw-bold mb-4">Amrita Vidyalayam</h4>
-            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2019-2020</p>
-            <p class="mb-0">"I completed my Higher Secondary Education in the Computer Science stream at Amrita Vidyalayam, achieving a remarkable 95.8% in my examinations. During this period, I embarked on learning Python and MySQL."</p>
-          </div>
+  </section><!-- /Hero Section -->
+
+<!-- About Section -->
+
+  <section id="about" class="about section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About</h2>
+      <p>Turning ideas into reality, one line of code at a time.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4">
+          <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" height = "800 px" width = "800px">
         </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img src="./assets/images/vit.avif" class="card-img-top"
-            alt="Responsive image">
-          <div class="card-body p-4">
-            <h4 class="fw-bold mb-4">Vellore instituteof Technology , Vellore</h4>
-            <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2021-2025</p>
-            <p class="mb-0">"I am currently pursuing my Bachelor's degree in Computer Science from Vellore Institute of Technology. My programming skills encompass C, C++, Java, and Python, while I have also delved deep into fundamental Computer Science concepts, including Operating Systems, Networks, Database Management Systems, and Object-Oriented Programming. Moreover, I have cultivated a strong interest in Data Science and AI. I am actively working on these domains for future"  </p>
+        <div class="col-lg-8 content">
+          <h2>CS undergrad &amp; AI Engineer </h2>
+          <p class="fst-italic py-3">
+            I am a CS Undergrad from VIT, Vellore with deep interest and knowledge  in the fiels of AI.  
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>3 August 2003</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>akshwin.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91-94437348870</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tamil Nadu, India </span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelors</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>akshwint.2003@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              </ul>
+            </div>
           </div>
+          <p class="py-3">During my Fresher year, I learned python and networked with many people and expanded my circle.  In my Sohomore year,  I learned programming languages like C , C++ , Java . I also worked as an editor for the book "Computer Specialized Cross Disciplinary Views and Life Skills.
+          In my third year , I became the Secretary of the Energy and Environment Protection Club for the year 2024.I also delved deep into Machine Leanring and Artificial Intelligence. I interned at the Samsung R&D Institute and worked in startups where I solved real life problems with the help of AI.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-</div>
-<br>
+  </section>
 
-<!-- FOOTER -->
+<!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Skills</h2>
+      <p>The future belongs to those who learn more skills and combine them in creative ways.  </p>
+      <p>   - Robert Greene</p>
+    </div><!-- End Section Title -->
 
-<footer class="bg-light text-center text-white" >
-  <p class="float-end mb-1">
-    <a href="./index.html">⬆️</a>
-  </p>
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row skills-content skills-animation">
 
-      <!-- Twitter -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #55acee;"
-        href="https://twitter.com/akshwin_2003"
-        role="button"
-        ><i class="fab fa-twitter">Twitter</i
-      ></a>
+        <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+              
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
 
-      <!-- Instagram -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #ac2bac;"
-        href="https://www.instagram.com/the_akshwin/"
-        role="button"
-        ><i class="fab fa-instagram">Instagram</i
-      ></a>
+            <div class="progress">
+              <span class="skill"><span>Bootstrap</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
 
-      <!-- Linkedin -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="https://www.linkedin.com/in/akshwin/"
-        role="button"
-        ><i class="fab fa-linkedin-in">Linkedin</i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #333333;"
-        href="https://github.com/akshwin"
-        role="button"
-        ><i class="fab fa-github">Github</i
-      ></a>
-    </section>
-  </div>
-    <!-- Copyright -->
-      <div class="text-center p-3" style="background-color:#F0F2F5;">© 2023 Copyright Akshwin </div>
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>ML</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Deep learning </span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Computer Vision</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Natural Language Processing </span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+        </div>
+      </div>
+  </section><!-- /Skills Section -->
+
+<!-- Resume Section -->
+  <section id="resume" class="resume section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p> Education is the passport to the future, for tomorrow belongs to those who prepare for it today. But experience is the teacher of all things.</p>
+    </div><!-- End Section Title -->
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Akshwin T </h4>
+              <p><em>I am a Final year CS Undergrad from VIT,Vellore pursuing Bachlors in Computer Science and Engineering with a deep passion for Artificial Intelligence . I am also Front End Developer and a Java Programmer</em></p>
+              <ul>
+                <li>Tamil Nadu , India </li>
+                <li>+91 94437488870</li>
+                <li>akshwint.2003@gmail.com</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelors -  Computer Science and Engineering</h4>
+              <h5>2021 - Present </h5>
+              <p><em>Vellore Institute of Technology , Vellore</em></p>
+              <p>I am pursuing Bachelors in Computer Science and Engineering . I developed my skills in Machine Learning , Artificial Intelligence, Web development and Java.</p>
+              <p> I also networked and got oppotunity to work in more projects, Books and Research Papers with my peers in the field of AI.  </p>
+                 </p>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Senior Secondary  &amp; CBSE </h4>
+              <h5>2019 - 2021</h5>
+              <p><em>Amrita Vidyalayam, Kanyakumari </em></p>
+              <p>I scored 95.8 % in my Boards becoming one of the top scorers from the school. I started to program in Python when I was in class 12 along with SQL. </p>
+              <p>I topped in Maths and Physics with 96 % becoming the top scorer of the subjects.</p>
+              <p>I scored 96 % in Chemistry becoming the second top scorer of the subject.</p>
+            </div><!-- End Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Kuppi Smart Solutions </h4>
+              <h5>AI/ML DEVELOPER</h5>
+              <p><em>July 2024 - Present  </em></p>
+              <ul>
+                <li>Researched about the Sericulture during the initial phase of the internship.</li>
+                <li>Implemented ML Algorithms and developed ANN models to predict with proxy data </li>
+                <li>Researched on Poultry sector and worked on factors affecting them.</li>
+                <li>The factors I researched and worked on factors like Dust , Sound and Water. </li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>SmartInternz</h4>
+              <h5>EXTERNSHIP</h5>
+              <p><em> Jun 2024 - Jul 2024 </em></p>
+              <ul>
+                <li>I Attended the webinars to learn abot the ML Algorithms , ANN , CNN , RNN , LSTM and Flask.</li>
+                <li>I worked in a team to build a flask application to identify tht dog breed using the concept of transfer learning.</li>
+                <li>The model used the Xception CNN Architeture too acheive an accuracy of 99.9 %. </li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Code Clause</h4>
+              <h5>AI INTERN </h5>
+              <p><em> Dec 2023 - Jan 2024 </em></p>
+              <ul>
+                <li>Build a CNN model to predict the Brain Tumor from MRI images.</li>
+                <li>The Model acheived an inpressive accurac of 95.6% </li>
+                <li>The model was integrated in an application in the Streamlit platform. </li>
+              </ul>
+            </div><!-- End Resume Item -->
+          </div>
+        </div>
+      </div>
+  </section><!-- /Resume Section -->
+
+<!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Portfolio</h2>
+      <p>Projects turn ideas into reality, showcasing your skills, creativity, and dedication while driving innovation and achieving tangible results.</p>
+    </div><!-- End Section Title -->
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">ML</li>
+            <li data-filter=".filter-product">AI</li>
+            <li data-filter=".filter-branding">Web Dev</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="./assets/img/masonry-portfolio/tumor.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>AI Project</h4>
+                <p>Brain Tumor Detector</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/lungs.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>AI Project </h4>
+                <p>Pneumonia Predictor</p>
+                <a href="assets/img/masonry-portfolio/lungs.png" title="App2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/bank_note.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ML Project</h4>
+                <p>Bank Note Analysis</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/cancer.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ML Project</h4>
+                <p>Breast Cancer Prediction</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/market.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ML Project</h4>
+                <p>Big Mart Sales Prediction</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/PARKINSON.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ML Project</h4>
+                <p>Parkinson Prediction</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/moving-van.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web Dev Project</h4>
+                <p>Move with Joy </p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-7" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/employee.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ML Project</h4>
+                <p>Amazon Employee challenge</p>
+                <a href="assets/img/masonry-portfolio/employee.webp" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/stock.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>  ML Project</h4>
+                <p>Tesla Stock Prediction</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+          </div><!-- End Portfolio Container -->
+        </div>
+      </div>
+  </section><!-- /Portfolio Section -->
+
+ <!-- FOTER SECTION -->
+<footer id="contact" class="footer position-relative light-background">
+  <div class="container">
+    <h3 class="sitename">Akshwin T </h3>
+    <p>Connect with me to build a futute of excellence </p>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://x.com/akshwin_2003"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.instagram.com/the_akshwin/"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/akshwin"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/akshwin/"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <div class="container">
+      <div class="copyright">
+      </div>
+      <div class="credits">
+          <a href="https://bootstrapmade.com/">Designed with the help of BootstrapMade </a>
+        </div>
+      </div>
+    </div>
   </footer>
-  
-<!--  JAVASCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- FOOTER END -->
+
+<!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
-</html
-
-
+</html>
