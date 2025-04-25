@@ -20,8 +20,6 @@
  <!-- Hero Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  
-
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -35,7 +33,11 @@
     }
     .navbar-brand {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 2rem;
+    }
+    .nav-item{
+      font-weight: 700;
+      font-size: 1.2rem;
     }
 
     /* Hero Section Styles */
@@ -234,15 +236,35 @@
         Your browser does not support the video tag.
       </video>
     </div>
-  
-    <div class="container text-center">
-      <h1 class="display-4 fw-bold hero-title" data-aos="fade-in" data-aos-delay="100">
-        Hi, I'm Akshwin
-      </h1>
-      <p class="lead mb-4 hero-subtitle" data-aos="fade-in" data-aos-delay="300">
-        AI Engineer · Full Stack Developer · Competitive Coder
-      </p>
-  
+
+<div class ='container'>
+<div class="container text-center">
+  <h1 class="display-4 fw-bold hero-title" data-aos="fade-in" data-aos-delay="100">
+    Hi, I'm Akshwin
+  </h1>
+  <p class="lead mb-4 hero-subtitle" data-aos="fade-in" data-aos-delay="300">
+    <span id="typed"></span>
+  </p>
+</div>
+
+<!-- JS library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Initialization -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Typed('#typed', {
+      strings: ["Data Science Enthusiast","AI Researcher", "ML Practitioner"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    });
+  });
+</script>
+
       <!-- Social Media Links -->
       <div class="social-icons mt-4" data-aos="fade-in" data-aos-delay="500">
         <a href="https://github.com/yourusername" target="blank" aria-label="GitHub">
@@ -262,6 +284,7 @@
           </a>
       </div>
     </div>
+  </div>
   </section>
     
   <!-- Navbar -->
@@ -365,7 +388,7 @@
   </section>
   
   <!-- Education -->
-  <section id="education" class="bg-light" data-aos="fade-up">
+  <section id="education" class="about-mf sect-pt4 route" data-aos="fade-up">
     <div class="container text-center">
       <h2 class="section-title">Education</h2>
       <div class="row justify-content-center">
@@ -381,7 +404,7 @@
   </section>
   
   <!-- Experience -->
-  <section id="experience" class="bg-light" data-aos="fade-up">
+  <section id="experience" class="about-mf sect-pt4 route" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title text-center">Experience</h2>
       <div class="row justify-content-center">
@@ -401,7 +424,7 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="bg-light" data-aos="fade-up">
+  <section id="projects" class="about-mf sect-pt4 route" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title text-center">Projects</h2>
       <div class="row g-4">
@@ -424,7 +447,7 @@
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="bg-light py-5" data-aos="fade-up">
+  <section id="certifications" class="about-mf sect-pt4 route py-5" data-aos="fade-up">
     <div class="container text-center">
       <h2 class="section-title">Certifications</h2>
       <div class="row justify-content-center">
@@ -439,7 +462,7 @@
   </section>
 
 <!-- Social Media -->
-<section id="social-media" class="bg-light" data-aos="fade-up">
+<section id="social-media" class="about-mf sect-pt4 route" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title text-center">Connect with Me</h2>
       <!-- Box Container for Social Links -->
@@ -458,10 +481,10 @@
   
 
   <!-- Footer -->
-  <footer class="footer text-center py-3">
+  <footer class="footer text-center py-3 bg-dark text-white">
     <p class="mb-0">&copy; 2025 Akshwin T. All rights reserved.</p>
   </footer>
-
+    
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -469,5 +492,7 @@
     AOS.init();
   </script>
 
+
+  
 </body>
 </html>
