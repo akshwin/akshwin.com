@@ -1,382 +1,495 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home </title>
-    <link rel="stylesheet" href="./styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <!-- custom css -->
-    <style>
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akshwin T | Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- AOS CSS (Animate on Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+
+ <!-- Hero Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css" />
+
 </head>
 
-<!-- NAVBAR -->
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-up">
+    <div class="video-background">
+      <video autoplay muted loop id="bg-video">
+        <source src="./hero.mp4" type="video/mp4">
+      </video>
+    </div>
 
-<header>
-  <div class = 'container'>
-    <h1> <img src="./assets/images/AK-logo.png" alt=""height =70 width = 70><span class="color">Akshwin T</span></h1>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./portfolio.html">Projects </a></li> 
-        <li><a href="./acheivements.html">Achievements </a></li> 
-        <li><a href="https://linktr.ee/akshwin.com">Contact</a></li>
+    <div class ='container'>
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold hero-title" data-aos="fade-in" data-aos-delay="100">
+        Hi, I'm Akshwin T
+      </h1>
+      <p class="lead mb-4 hero-subtitle" data-aos="fade-in" data-aos-delay="300">
+        <span id="typed"></span>
+      </p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-icons mt-4" data-aos="fade-in" data-aos-delay="500">
+      <a href="https://github.com/akshwin" target="blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/akshwin/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/akshwin_2003" target="_blank" aria-label="Twitter">
+        <i class="bi bi-twitter-x fs-5"></i>
+      </a>
+      <a href="https://medium.com/@akshwin" target="_blank" aria-label="Medium">
+          <i class="fab fa-medium"></i>
+      </a>
+      <a href="https://www.instagram.com/the_akshwin/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.kaggle.com/akshwint" target="_blank" aria-label="Kaggle">
+        <i class="fab fa-kaggle"></i>
+      </a>
+      <a href="https://substack.com/@akshwin" target="_blank"  aria-label="Substack">
+        <i class="bi bi-substack fs-2 "></i>
+      </a>   
+      <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank" aria-label="Google scholar">
+        <i class="bi bi-google fs-2"></i>
+      </a>      
+    </div>
+  </div>
+</section>
+    
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Akshwin T</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#conferences">Conferences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </div> 
-</header> 
-
-<!-- ABOUT -->
-
-<div class="container my-5">
-  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-      <h1 class="display-4 fw-bold lh-1 text-body-emphasis"> Hello Everyone!!👋👋 </h1>
-      <br>
-      <p class="lead"> I'm Akshwin T, a Final Year Undergrad Student at VIT Vellore, with a deep passion for Computer Science , Artificial Intelligence and Programming. My academic journey here has been a thrilling odyssey, where I've honed my skills in Programming , Machine Learning , Artificial Intelligence and Research.</p>
-      <p class = "lead">I thrive on challenges and am committed to pushing the boundaries of what technology can achieve. VIT Vellore has been the perfect platform for me to explore my interests and get connected to link minded people.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <a href="./about.html">
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="augia">Know more about me </button>
-        </a>
+    </div>
+  </div>
+</nav>
+  
+<!-- About -->
+<section id="about" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center">ABOUT ME</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full" style="border-radius: 1rem;">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-sm-3 "></div>
+                <div class="col-sm-4 col-md-5">
+                  <div class="about-img">
+                    <img src="./assets/images/akshwin.png" class="img-fluid rounded b-shadow-a" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 "></div>
+              </div>
+              <div class="skill-mf">
+                <p class="title-s">Skills</p>
+                <ul>
+                <li>Programming Languages: C, C++, Java, Python, SQL</li>
+                <li>Web: HTML, CSS3, JavaScript, Bootstrap, Flask</li>
+                <li>ML: NumPy, Pandas, Scikit-learn, Searborn, Plotly </li>
+                <li>DL: Tensorflow, Keras, PyTorch, OpenCV, YoloV4</li>
+                </ul>
+                <div class="progress">
+                  </div>
+                  <p class="title-s">Tools</p>
+                  <ul>
+                  <li>Database Tools: MySQL, Oracle, MYSQL Workbench</li>
+                  <li>Visualization Tools: Microsoft Poer BI, Tableau, Google Colab</li>
+                  <li>Cloud and dep;oyment: AWS, Heroku, Streamlit</li>
+                  </ul>
+                <div class="progress">
+                   </div>
+                   <p class="title-s">Software</p>
+                   <span>Anaconda Navigator, Jupyter, MATLAB, VS Code, Microsoft Office</span> <span class="pull-right"></span>
+                   <div class="progress">
+                     </div>
+                     <p class="title-s">Domains</p>
+                   <span>Data Science, Artificial Intelligence, Machine Learning, Deep Learning</span> <span class="pull-right"></span>
+                   <div class="progress">
+                     </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-me pt-4 pt-md-0">
+                <p class="lead">
+                  Hello!
+                  I'm Akshwin T, a Computer Engineer with a Master's degree in Information Systems Management from Carnegie Mellon University. Currently, I am leveraging my skills as a Product Marketing Manager in the rapidly evolving field of Data Science and AI at HP.
+                </p>
+                <p class="lead">
+                  I take pride in being the youngest triple Kaggle Grandmaster across the Notebooks, Datasets, and Discussion categories. My previous role as the Leader of Data Science at OpenMined allowed me to hone my leadership skills while guiding a team of data scientists in creating groundbreaking solutions. Furthermore, as one of the 21 Data Science Global Ambassadors for Z by HP, I had the privilege of sharing my knowledge and insights with the wider data science community.  
+                </p>
+                <p class="lead">
+                  My passion for coding began at a young age and has only intensified over time, with a particular focus on Data Science. My experience working in the technology divisions of multinational corporations such as Sony and Colgate-Palmolive has provided me with invaluable industry insights. As we witness the ever-growing integration of businesses and information technology, I am committed to leveraging my expertise in order to bridge the gap between technology and business effectively.  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3" src="./assets/images/Home/ak1.jpeg " alt="" width="450" height="450">
-    </div>
   </div>
-</div>
-
-<br>
-<br>
-
-<!-- SKILLS -->
-
-<h1> SKILLS</h1>
-
-<section id="skills" class="skills-section">
-
-<br>
-
-<!-- LANGUAGES -->
-
-  <div class="cells">
-    <div class="cell">
-      <img src="./assets/images/Skills/java.webp" alt="html logo">
-      <span>Java </span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/python.jpeg" alt="css logo">
-      <span>Python</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/c++.jpg" alt="javascript logo">
-      <span>C++</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/c.png" alt="node logo">
-      <span>C </span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/js.png" alt="react logo">
-      <span>JavaScript</span>
-    </div>
-  </div>
-
-<!-- WEB DEVELOPMENT-->
-
-  <div class="cells">
-    <div class="cell">
-      <img src="./assets/images/Skills/html.png" alt="html logo">
-      <span>HTML</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/css.svg" alt="css logo">
-      <span>CSS</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/bootstrap.png" alt="javascript logo">
-      <span>Bootstrap</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/nodejs.svg" alt="node logo">
-      <span>Node.js</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/mysql.png" alt="react logo">
-      <span>My SQL </span>
-    </div>
-  </div>
-
-<!-- DATABASE -->
-
-  <div class="cells">
-    <div class="cell">
-      <img src="./assets/images/Skills/oracle.png" alt="html logo">
-      <span>Oracle</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/sqlworkbench.png" alt="css logo">
-      <span>My SQL Workbench</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/msserver.svg" alt="javascript logo">
-      <span>Microsft SQL Server</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/postgresql.png" alt="node logo">
-      <span>PostgreSQL</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/aws.jpg" alt="react logo">
-      <span>AWS</span>
-    </div>
-  </div>
-
-  <!-- AI / ML LIBRARIES -->
-
-  <div class="cells">
-    <div class="cell">
-      <img src="./assets/images/Skills/numpy.png" alt="html logo">
-      <span>Numpy</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/pandas.png" alt="css logo">
-      <span>Pandas</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/matplotlib.png" alt="javascript logo">
-      <span>Matplotlib</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/seaborn.png" alt="node logo">
-      <span>Seaborn</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/sklearn.png" alt="react logo">
-      <span>Scikit-Learn</span>
-    </div>
-  </div>
-
-<!-- FRAMEWORKS -->
-
-  <div class="cells">
-    <div class="cell">
-      <img src="./assets/images/Skills/tf.png" alt="html logo">
-      <span>Tensorflow</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/keras.png" alt="css logo">
-      <span>Keras</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/django.png" alt="javascript logo">
-      <span>Django </span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/flask.png" alt="node logo">
-      <span>Flask</span>
-    </div>
-    
-    <div class="cell">
-      <img src="./assets/images/Skills/streamlit.png" alt="react logo">
-      <span>Streamlit</span>
-    </div>
-  </div>
-
-<!-- OTHER TOOLS -->
-
-<div class="cells">
-  <div class="cell">
-    <img src="./assets/images/Skills/spacy.png" alt="html logo">
-    <span>Spacy</span>
-  </div>
+</section>
   
-  <div class="cell">
-    <img src="./assets/images/Skills/opencv.png" alt="css logo">
-    <span>Open CV </span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/scrapy.png" alt="javascript logo">
-    <span>Scrapy</span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/selenium.png" alt="node logo">
-    <span>Selenium</span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/beautifulsoup.png" alt="react logo">
-    <span>Beautiful Soup</span>
-  </div>
+<!-- Education -->
+<section id="education" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">EDUCATION</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
 
+    <div class="row justify-content-center g-4 mt-4">
+      <!-- First Education -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+          <div class="education-img-wrapper mb-3">
+            <img src="./assets/images/vit.png" alt="VIT Logo" class="education-img">
+          </div>
+          <h4 class="mb-2">Vellore Institute of Technology</h4>
+          <p class="text-muted mb-1">B.Tech in Computer Science and Engineering</p>
+          <small class="text-muted">2021 – 2025 | CGPA: <strong>9.01</strong></small>
+        </div>
+      </div>
 
-<div class="cells">
-  <div class="cell">
-    <img src="./assets/images/Skills/git.png" alt="html logo">
-    <span>Git</span>
+      <!-- Second Education -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+          <div class="education-img-wrapper mb-3">
+            <img src="./assets/images/amrita.jpeg" alt="School Logo" class="education-img">
+          </div>
+          <h4 class="mb-2">Amrita Vidyalayam</h4>
+          <p class="text-muted mb-1">Senior Secondary (CBSE) - PCM + CS</p>
+          <small class="text-muted">2019 – 2021 | Percentage: <strong>95.8%</strong></small>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/powerbi.png" alt="css logo">
-    <span>Power BI</span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/colab.png" alt="javascript logo">
-    <span>Google Colab</span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/anaconda.png" alt="node logo">
-    <span>Anaconda Navigator</span>
-  </div>
-  
-  <div class="cell">
-    <img src="./assets/images/Skills/vscode.jpeg" alt="react logo">
-    <span>VS Code</span>
-  </div>
-</div>
 </section>
 
-<!-- CERTIFICATIONS-->
+<!-- Experience -->
+<section id="experience" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center">EXPERIENCE</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+    <div class="row justify-content-center g-4">
+      
+      <!-- Experience 1 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4 ">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/kuppi.jpeg" class="card-img-top rounded-top-4" alt="Kuppi Smart Solutions" height="200px" width="200px">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-1">AI/ML Intern – Kuppi Smart Solutions</h5>
+            <small class="text-muted">June 2024 – July 2024</small>
+            <ul class="mt-2 ps-3">
+              <li>Developed a dual U-Net based lane detection architecture.</li>
+              <li>Improved segmentation accuracy and real-time performance.</li>
+              <li>Dataset pre-processing and model tuning using PyTorch.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<h1> CERTIFICATIONS</h1>
+      <!-- Experience 2 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/e2pc.jpeg" class="card-img-top rounded-top-4" alt="Software Developer Internship" height="200px" width="200px">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-1">Software Developer Intern – Example Company</h5>
+            <small class="text-muted">Jan 2024 – Mar 2024</small>
+            <ul class="mt-2 ps-3">
+              <li>Built REST APIs using Node.js and Express.js.</li>
+              <li>Integrated third-party authentication and payment gateways.</li>
+              <li>Deployed apps on AWS EC2 instances.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<div class = 'container'>
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="./assets/images/Home/ai.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
+      <!-- Experience 3 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/smartinternz.jpeg" class="card-img-top rounded-top-4" alt="Research Internship" height="200px" width="200px">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-1">Research Intern – AI Lab</h5>
+            <small class="text-muted">Aug 2023 – Dec 2023</small>
+            <ul class="mt-2 ps-3">
+              <li>Published paper on Brain Tumor Detection using CNNs.</li>
+              <li>Worked with medical imaging and anomaly detection.</li>
+              <li>Presented research at an international conference.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">AI Using Tensorflow Externship</h1>
-      <p class="lead">The AI Using Google TensorFlow Externship from SmartInternz has equipped me with practical skills in building and deploying AI models using TensorFlow. I also got the hands-on experience where I built a project to find the Dog Breed using Transfer Learning with a team.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center">PROJECTS</h2>
+    <div class="section-underline mx-auto mb-3"></div>   
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/dst.jpg" alt="Project 1 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Brain Tumor Classification</h5>
+          <p>Developed a deep learning model using VGG16, ResNet50, and DenseNet121 to detect glioma, meningioma, and pituitary tumors from MRI scans.</p>
+          <a href="#" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/hamorrhage.webp" alt="Project 2 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Personal Portfolio Website</h5>
+          <p>Modern responsive portfolio using React, Bootstrap, TailwindCSS, and GitHub Pages hosting to showcase my work and credentials.</p>
+          <a href="#" class="btn btn-dark btn-sm">Live Preview</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/lane.webp" alt="Project 3 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Lane Detection using U-Net</h5>
+          <p>Built a dual U-Net architecture for real-time lane detection with enhanced segmentation accuracy using PyTorch.</p>
+          <a href="#" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/tuberculosis.webp" alt="Project 4 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Blog Platform with Next.js</h5>
+          <p>Developed a full-stack blog application using Next.js, TailwindCSS, and MongoDB with authentication features.</p>
+          <a href="#" class="btn btn-dark btn-sm">Live Preview</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/lungs.png" alt="Project 5 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Medical Anomaly Detection</h5>
+          <p>Worked on anomaly detection models in medical imaging, using autoencoders and GANs for unsupervised learning tasks.</p>
+          <a href="#" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <div class="project-img-wrapper mb-3">
+            <img src="./assets/images/tumor.jpg" alt="Project 6 Image" class="project-img">
+          </div>
+          <h5 class="card-title">Weather Forecasting App</h5>
+          <p>Built a weather prediction app using OpenWeatherMap API, ReactJS, and Bootstrap for UI with dynamic location-based forecasts.</p>
+          <a href="#" class="btn btn-dark btn-sm">Live Preview</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class = 'container'>
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="./assets/images/Home/data_cer.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Full Stack Data Scientist Bootcamp</h1>
-      <p class="lead">This certification has equipped me with comprehensive skills in Data Science, Machine Learning, Artificial Intelligence and Full Stack Web Development. This training has prepared me for roles that require expertise in end-to-end data solutions and application deployment.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+<!-- Certifications -->
+<section id="certifications" class="about-mf sect-pt4 route py-5" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">CERTIFICATIONS</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+
+    <div class="row justify-content-center g-4 mt-4">
+
+      <!-- First Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/cloud.png" alt="Certification 4" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">AWS Academy Cloud Foundations</h4>
+            <p class="text-muted mb-1">Completed: <strong>April 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-4.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/aws_cp.png" alt="Certification 1" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">AWS Certified Cloud Practitioner</h4>
+            <p class="text-muted mb-1">Completed: <strong>July 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/ds_bootcamp.png" alt="Certification 2" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">The Full Stack Data Scientist Bootcamp</h4>
+            <p class="text-muted mb-1">Completed: <strong>June 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/ai_tf.png" alt="Certification 3" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2"> Artificial Intelligence Using Google TensorFlow</h4>
+            <p class="text-muted mb-1">Completed: <strong>May 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-3.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class = 'container'>
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="./assets/images/Home/aws.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">AWS Certified Cloud Practioner </h1>
-      <p class="lead">The AWS Certified Cloud Practitioner certification validates my foundational understanding of cloud concepts, AWS services, architecture and best practices. It demonstrates the knowledge needed to effectively work with AWS Cloud, making it a great starting point for me to begin my journey.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+<!-- Conferences Section -->
+<section id="conferences" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">CONFERENCES</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+
+    <div class="row justify-content-center g-4 mt-4">
+      <!-- First Conference -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/icon-bciht.png" alt="Medical Imaging Conference" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">International Conference on Medical Imaging</h4>
+            <p class="text-muted mb-1">Topic: <strong>Deep Learning for Medical Diagnostics</strong></p>
+            <small class="text-muted">Presented: <strong>March 2025</strong></small>
+          </div>
+          <div class="mt-3 d-flex justify-content-center gap-3">
+            <!-- View Certificate Button -->
+            <a href="certificate-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+            <!-- View Paper Button -->
+            <a href="paper-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Conference -->
+      <div class="col-md-6">
+        <div data-aos="slide-up" data-aos-duration="1000" class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/inc4.png" alt="AI Healthcare Conference" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">IEEE Conference on AI in Healthcare</h4>
+            <p class="text-muted mb-1">Topic: <strong>AI Models for Patient Care Optimization</strong></p>
+            <small class="text-muted">Presented: <strong>November 2024</strong></small>
+          </div>
+          <div class="mt-3 d-flex justify-content-center gap-3">
+            <!-- View Certificate Button -->
+            <a href="certificate-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+            <!-- View Paper Button -->
+            <a href="paper-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Paper</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class = 'container'>
-<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-  <div class="col-10 col-sm-8 col-lg-6">
-    <img src="./assets/images/Home/python_cer.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
-  </div>
-  <div class="col-lg-6">
-    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Python for ML & Data Science Masterclass </h1>
-    <p class="lead">This certification has equipped me with essential skills in Python, Data Manipulation, Visualization, and Implementing Machine Learning Algorithms using various libraries to solve the real world problems and served as a foundation for my jouney with Machine Learning.</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+<!-- Footer -->
+<footer class="footer bg-dark text-white" id="contact" data-aos="fade-up" style="padding: 10px 0;">
+  <div class="container">
+    <div class="row justify-content-between align-items-center mb-3">
+      
+      <!-- Left Side: Email -->
+      <div class="col-md-6 d-flex justify-content-start ps-5">
+        <a href="mailto:yourmail@example.com" class="text-white fs-6" style="text-decoration: none;">
+          <i class="bi bi-envelope-fill me-2"></i> akshwint.2003@gmail.com
+        </a>
+      </div>
+
+      <!-- Right Side: Social Media Links -->
+      <div class="col-md-6 d-flex justify-content-end gap-3 flex-wrap pe-5">
+        <a href="https://github.com/akshwin" target="_blank" class="bi bi-github fs-5" style="color: white; text-decoration: none;"></a>
+        <a href="https://www.linkedin.com/in/akshwin/" target="_blank" class="bi bi-linkedin fs-5" style="color: #0077b5; text-decoration: none;"></a>
+        <a href="https://x.com/akshwin_2003" target="_blank" class="bi bi-twitter-x fs-5" style="color: white; text-decoration: none;"></a>
+        <a href="https://www.instagram.com/the_akshwin/" target="_blank" class="bi bi-instagram fs-5" style="color: #e1306c; text-decoration: none;"></a>
+        <a href="https://www.kaggle.com/akshwint" target="_blank" class="fab fa-kaggle fs-5" style="color: #20beff; text-decoration: none;"></a>
+        <a href="https://medium.com/@akshwin" target="_blank" class="bi bi-medium fs-5" style="color: white; text-decoration: none;"></a>
+        <a href="https://substack.com/@akshwin" target="_blank" class="bi bi-substack fs-5" style="color: orange; text-decoration: none;"></a>
+      </div>
+    </div>
+    <!-- Bottom Center Text -->
+    <div class="text-center mt-3">
+      <small>Created by Akshwin T 🔥</small>
     </div>
   </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-
-<footer class="bg-light text-center text-white" >
-  <p class="float-end mb-1">
-    <a href="./index.html">⬆️</a>
-  </p>
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Twitter -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #55acee;"
-        href="https://twitter.com/akshwin_2003"
-        role="button"
-        ><i class="fab fa-twitter">Twitter</i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #ac2bac;"
-        href="https://www.instagram.com/the_akshwin/"
-        role="button"
-        ><i class="fab fa-instagram">Instagram</i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="https://www.linkedin.com/in/akshwin/"
-        role="button"
-        ><i class="fab fa-linkedin-in">Linkedin</i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #333333;"
-        href="https://github.com/akshwin"
-        role="button"
-        ><i class="fab fa-github">Github</i
-      ></a>
-    </section>
-  </div>
-    <!-- Copyright -->
-      <div class="text-center p-3" style="background-color:#F0F2F5;">© 2024 Copyright Akshwin </div>
 </footer>
-  
-<!--  JAVASCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- JS library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- Custom JS -->
+<script src="./hero.js"></script> <!-- Your custom initialization -->
+  <script>
+  AOS.init();
+</script>
 
 </body>
-</html
+</html>
