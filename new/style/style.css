@@ -1,0 +1,198 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4; /* Grey background for the whole page */
+    margin: 0;
+    padding: 0;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .section-underline {
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+  }
+  
+    
+/*Navbar style*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .nav-item{
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  padding: 100px 0; /* Adds space above and below the content */
+  color: white; /* Ensures text stands out */
+  overflow: hidden; /* Prevents the animation from spilling out */
+  height: 100vh; /* Ensures the section fills the viewport height */
+  z-index: 1;
+}
+
+/* Video Background Styling */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Puts the video behind the content */
+}
+
+#bg-video {
+  object-fit: cover; /* Ensures the video covers the entire section */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Container Styling */
+.hero .container {
+  position: relative; /* Keeps the text on top of the video */
+  text-align: center;
+  z-index: 1; /* Ensures the content appears on top of the background */
+}
+
+/* Text and Button Styling */
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn-custom {
+  background-color: #007bff; /* Customize button color */
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 10rem;
+
+}
+/* Icon in hero section */
+.social-icons a:hover {
+  color: #1da1f2; /* Twitter blue or adjust for each */
+}
+  
+  .section-title {
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+   /*  CSS for icons in hero */
+   .social-icons a {
+    color: inherit; /* Keep icon color same as text */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between icons */
+    font-size: 2rem; /* Make icons bigger if you want */
+  }
+
+  .social-icons i {
+    vertical-align: middle; /* Align icons properly */
+  }
+
+/* About section */ 
+  .about-content .text-wrapper {
+    max-width: 800px;
+  }
+
+  .box-shadow-full {
+      padding: 3rem 1.25rem;
+      position: relative;
+      background-color: #fff;
+      margin-bottom: 3rem;
+      z-index: 2;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  img {
+    vertical-align: middle;
+    border-style: none;
+}
+.img-fluid {
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+}
+.rounded {
+    border-radius: .25rem !important;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+  .title-s {
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+.skill-mf .progress {
+    background-color: #f5f5f5;
+    margin: .3rem 0 1.2rem 0;
+    border-radius: 0;
+    height: .3rem;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+
+
+
+/*  CSS for icons in footer */
+.social-icon {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 6px; 
+  }
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+    .hero {
+      padding-top: 100px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+    }
+  }
