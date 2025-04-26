@@ -15,7 +15,6 @@ body {
     border-radius: 2px;
   }
   
-    
 /*Navbar style*/
 .navbar {
     position: fixed;
@@ -23,6 +22,7 @@ body {
     width: 100%;
     z-index: 1000;
     transition: top 0.3s;
+    display:none;
   }
   
   .navbar-brand {
@@ -173,11 +173,52 @@ body {
     font-weight: 300;
 }
 
+/* CSS for the cards */
+  .about-mf .section-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
 
+  .about-mf .section-underline {
+    background-color: black;
+    width: 60px;
+    height: 2px;
+    margin: 0 auto;
+  }
+
+  .card img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-outline-dark {
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+  }
 
 
 /*  CSS for icons in footer */
-.social-icon {
+.social-media-box {
     color: black;
     text-decoration: none;
     position: relative;
@@ -196,3 +237,5 @@ body {
       font-size: 1rem;
     }
   }
+
+

@@ -87,6 +87,7 @@
         <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#conferences">Conferences</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -94,7 +95,7 @@
 </nav>
   
 <!-- About -->
-<section id="about" class="about-mf sect-pt4 route">
+<section id="about" class="about-mf sect-pt4 route" data-aos="fade-up">
   <div class="container">
     <h2 class="section-title text-center">ABOUT ME</h2>
     <div class="section-underline mx-auto mb-3"></div> 
@@ -161,120 +162,310 @@
   </div>
 </section>
   
-  <!-- Education -->
-  <section id="education" class="about-mf sect-pt4 route" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title">Education</h2>
-      <div class="section-underline mx-auto mb-3"></div> 
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card shadow-sm border-0 rounded-4 p-4">
-            <h4>Vellore Institute of Technology</h4>
-            <p class="mb-1">B.Tech in Computer Science and Engineering</p>
-            <small class="text-muted">2021 – 2025 | CGPA: 9.01</small>
-          </div>
+<!-- Education -->
+<section id="education" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">EDUCATION</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+
+    <div class="row justify-content-center g-4 mt-4">
+      <!-- First Education -->
+      <div  data-aos-duration="1000" class="col-md-6">
+        <div data-aos="slide-up" class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+          <img src="./assets/images/vit.png" alt="VIT Logo" class="mb-3" height="300px" width="500px">
+          <h4 class="mb-2">Vellore Institute of Technology</h4>
+          <p class="text-muted mb-1">B.Tech in Computer Science and Engineering</p>
+          <small class="text-muted">2021 – 2025 | CGPA: <strong>9.01</strong></small>
+        </div>
+      </div>
+
+      <!-- Second Education -->
+      <div class="col-md-6">
+        <div data-aos="slide-up" data-aos-duration="1000" class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center">
+          <img src="./assets/images/amrita.jpeg" alt="School Logo" class="mb-3" height="300px" width="500px">
+          <h4 class="mb-2">Amrita Vidyalayam</h4>
+          <p class="text-muted mb-1">Senior Secondary (CBSE) - PCM + CS</p>
+          <small class="text-muted">2019 – 2021 | Percentage: <strong>95.8%</strong></small>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Experience -->
-  <section id="experience" class="about-mf sect-pt4 route" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title text-center">Experience</h2>
-      <div class="section-underline mx-auto mb-3"></div> 
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card shadow-sm border-0 rounded-4 p-4 mb-3">
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center">EXPERIENCE</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+    <div class="row justify-content-center g-4">
+      
+      <!-- Experience 1 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4 ">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/kuppi.jpeg" class="card-img-top rounded-top-4" alt="Kuppi Smart Solutions" height="200px" width="200px">
+          <div class="card-body p-4">
             <h5 class="fw-bold mb-1">AI/ML Intern – Kuppi Smart Solutions</h5>
             <small class="text-muted">June 2024 – July 2024</small>
             <ul class="mt-2 ps-3">
               <li>Developed a dual U-Net based lane detection architecture.</li>
-              <li>Achieved improved segmentation accuracy and real-time performance.</li>
-              <li>Worked on dataset pre-processing and model tuning using PyTorch.</li>
+              <li>Improved segmentation accuracy and real-time performance.</li>
+              <li>Dataset pre-processing and model tuning using PyTorch.</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="about-mf sect-pt4 route" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title text-center">Projects</h2>
-      <div class="section-underline mx-auto mb-3"></div>   
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
-            <h5 class="card-title">Brain Tumor Classification</h5>
-            <p>Developed a deep learning model using VGG16, ResNet50, and DenseNet121 to detect glioma, meningioma, and pituitary tumors from MRI scans.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      <!-- Experience 2 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/e2pc.jpeg" class="card-img-top rounded-top-4" alt="Software Developer Internship" height="200px" width="200px">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-1">Software Developer Intern – Example Company</h5>
+            <small class="text-muted">Jan 2024 – Mar 2024</small>
+            <ul class="mt-2 ps-3">
+              <li>Built REST APIs using Node.js and Express.js.</li>
+              <li>Integrated third-party authentication and payment gateways.</li>
+              <li>Deployed apps on AWS EC2 instances.</li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
-            <h5 class="card-title">Personal Portfolio Website</h5>
-            <p>Modern responsive portfolio using React, Bootstrap, TailwindCSS, and GitHub Pages hosting to showcase my work and credentials.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Live Preview</a>
+      </div>
+
+      <!-- Experience 3 -->
+      <div data-aos="zoom-in" data-aos-duration="1000" class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="./assets/images/smartinternz.jpeg" class="card-img-top rounded-top-4" alt="Research Internship" height="200px" width="200px">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-1">Research Intern – AI Lab</h5>
+            <small class="text-muted">Aug 2023 – Dec 2023</small>
+            <ul class="mt-2 ps-3">
+              <li>Published paper on Brain Tumor Detection using CNNs.</li>
+              <li>Worked with medical imaging and anomaly detection.</li>
+              <li>Presented research at an international conference.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center">PROJECTS</h2>
+    <div class="section-underline mx-auto mb-3"></div>   
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/dst.jpg" alt="Project 1 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Brain Tumor Classification</h5>
+          <p>Developed a deep learning model using VGG16, ResNet50, and DenseNet121 to detect glioma, meningioma, and pituitary tumors from MRI scans.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/hamorrhage.webp" alt="Project 2 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Personal Portfolio Website</h5>
+          <p>Modern responsive portfolio using React, Bootstrap, TailwindCSS, and GitHub Pages hosting to showcase my work and credentials.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Live Preview</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/lane.webp" alt="Project 3 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Lane Detection using U-Net</h5>
+          <p>Built a dual U-Net architecture for real-time lane detection with enhanced segmentation accuracy using PyTorch.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/tuberculosis.webp" alt="Project 4 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Blog Platform with Next.js</h5>
+          <p>Developed a full-stack blog application using Next.js, TailwindCSS, and MongoDB with authentication features.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Live Preview</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/lungs.png" alt="Project 5 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Medical Anomaly Detection</h5>
+          <p>Worked on anomaly detection models in medical imaging, using autoencoders and GANs for unsupervised learning tasks.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-4">
+        <div data-aos="flip-left" class="card h-100 shadow-sm border-0 rounded-4 p-4">
+          <img src="./assets/images/tumor.jpg" alt="Project 6 Image" class="card-img-top rounded-4 mb-3" height="200px" width="200px">
+          <h5 class="card-title">Weather Forecasting App</h5>
+          <p>Built a weather prediction app using OpenWeatherMap API, ReactJS, and Bootstrap for UI with dynamic location-based forecasts.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Live Preview</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="about-mf sect-pt4 route py-5" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">CERTIFICATIONS</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+
+    <div class="row justify-content-center g-4 mt-4">
+
+      <!-- First Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/cloud.png" alt="Certification 4" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">AWS Academy Cloud Foundations</h4>
+            <p class="text-muted mb-1">Completed: <strong>April 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-4.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/aws_cp.png" alt="Certification 1" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">AWS Certified Cloud Practitioner</h4>
+            <p class="text-muted mb-1">Completed: <strong>July 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/ds_bootcamp.png" alt="Certification 2" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">Artificial Intelligence Using Google TensorFlow</h4>
+            <p class="text-muted mb-1">Completed: <strong>June 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Certification -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/ai_tf.png" alt="Certification 3" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">The Full Stack Data Scientist Bootcamp</h4>
+            <p class="text-muted mb-1">Completed: <strong>May 2024</strong></p>
+          </div>
+          <div class="mt-3">
+            <a href="certificate-link-3.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Conferences Section -->
+<section id="conferences" class="about-mf sect-pt4 route" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">CONFERENCES</h2>
+    <div class="section-underline mx-auto mb-3"></div> 
+
+    <div class="row justify-content-center g-4 mt-4">
+      <!-- First Conference -->
+      <div data-aos="slide-up" data-aos-duration="1000" class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/icon-bciht.png" alt="Medical Imaging Conference" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">International Conference on Medical Imaging</h4>
+            <p class="text-muted mb-1">Topic: <strong>Deep Learning for Medical Diagnostics</strong></p>
+            <small class="text-muted">Presented: <strong>March 2025</strong></small>
+          </div>
+          <div class="mt-3 d-flex justify-content-center gap-3">
+            <!-- View Certificate Button -->
+            <a href="certificate-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+            <!-- View Paper Button -->
+            <a href="paper-link-1.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Conference -->
+      <div class="col-md-6">
+        <div data-aos="slide-up" data-aos-duration="1000" class="card h-100 shadow-sm border-0 rounded-4 p-4 text-center d-flex flex-column justify-content-between">
+          <div>
+            <img src="./assets/images/inc4.png" alt="AI Healthcare Conference" class="mb-3" height="300px" width="500px">
+            <h4 class="mb-2">IEEE Conference on AI in Healthcare</h4>
+            <p class="text-muted mb-1">Topic: <strong>AI Models for Patient Care Optimization</strong></p>
+            <small class="text-muted">Presented: <strong>November 2024</strong></small>
+          </div>
+          <div class="mt-3 d-flex justify-content-center gap-3">
+            <!-- View Certificate Button -->
+            <a href="certificate-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Certificate</a>
+            <!-- View Paper Button -->
+            <a href="paper-link-2.pdf" target="_blank" class="btn btn-outline-dark rounded-3 px-4 py-2">View Paper</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="about-mf sect-pt4 route py-5" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title">Certifications</h2>
-      <div class="section-underline mx-auto mb-3"></div> 
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card shadow-sm border-0 rounded-4 p-4">
-            <h5>Advanced AI for Developers - Google Cloud</h5>
-            <small class="text-muted">Completed: July 2024</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Footer -->
+<footer class="footer text-center bg-dark text-white" id="contact" data-aos="fade-up" style="padding: 20px 0;">
+  <div id = "contact" class="container">
+    <h6 class="section-title text-white mb-2" style="font-weight: 600;">Connect with Me</h6>
+    <div class="mx-auto mb-3" style="background-color: white; height: 2px; width: 40px;"></div> 
 
-<!-- Social Media -->
-<section id="contact" class="about-mf sect-pt4 route" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title text-center">Connect with Me</h2>
-      <div class="section-underline mx-auto mb-3"></div> 
-      <!-- Box Container for Social Links -->
-      <div class="social-media-box p-4 rounded-4 shadow-sm" style="background-color: #f8f9fa;">
-        <!-- Flexbox for social media links -->
-        <div class="d-flex justify-content-center gap-4">
-          <a href="https://github.com/akshwin" target="_blank" class="bi bi-github fs-2" style="color: #333;"></a>
-          <a href="https://www.linkedin.com/in/akshwin/" target="_blank" class="bi bi-linkedin fs-2" style="color: #0077b5;"></a>
-          <a href="https://x.com/akshwin_2003" target="_blank" class="fab fa-x-twitter fs-2 social-icon"></a>
-          <a href="https://www.instagram.com/the_akshwin/" target="_blank" class="bi bi-instagram fs-2" style="color: #e1306c;"></a>
-          <a href="https://www.kaggle.com/akshwint" target="_blank" class="fab fa-kaggle fs-2 " style="color: #20beff;"></a>
-          <a ref="https://medium.com/@akshwin" target="_blank" class="bi bi-medium fs-2" style="color: black;"></a>
-          <a ref="https://substack.com/@akshwin" target="_blank" class="bi bi-substack fs-2 " style="color: orange;"></a>
-        </div>
-      </div>
+    <!-- Social Links -->
+    <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mb-2">
+      <a href="https://github.com/akshwin" target="_blank" class="bi bi-github fs-5" style="color: white; text-decoration: none;"></a>
+      <a href="https://www.linkedin.com/in/akshwin/" target="_blank" class="bi bi-linkedin fs-5" style="color: #0077b5; text-decoration: none;"></a>
+      <a href="https://x.com/akshwin_2003" target="_blank" class="bi bi-twitter-x fs-5" style="color: white; text-decoration: none;"></a>
+      <a href="https://www.instagram.com/the_akshwin/" target="_blank" class="bi bi-instagram fs-5" style="color: #e1306c; text-decoration: none;"></a>
+      <a href="https://www.kaggle.com/akshwint" target="_blank" class="fab fa-kaggle fs-5" style="color: #20beff; text-decoration: none;"></a>
+      <a href="https://medium.com/@akshwin" target="_blank" class="bi bi-medium fs-5" style="color: white; text-decoration: none;"></a>
+      <a href="https://substack.com/@akshwin" target="_blank" class="bi bi-substack fs-5" style="color: orange; text-decoration: none;"></a>
     </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="footer text-center py-3 bg-dark text-white">
-    <p class="mb-0">&copy; 2025 Akshwin T. All rights reserved.</p>
-  </footer>
+    <small class="text-muted">&copy; 2025 Akshwin T. All rights reserved.</small>
+  </div>
+</footer>
     
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <!-- JS library -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <!-- Custom JS -->
-  <script src="./hero.js"></script> <!-- Your custom initialization -->
-    <script>
-    AOS.init();
-  </script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- JS library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- Custom JS -->
+<script src="./hero.js"></script> <!-- Your custom initialization -->
+  <script>
+  AOS.init();
+</script>
 
 </body>
 </html>

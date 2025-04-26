@@ -1,18 +1,14 @@
+const navbar = document.querySelector('.navbar');
 
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.querySelector('.navbar');
-
-  window.onscroll = function () {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.top = "0"; // show navbar
-    } else {
-      navbar.style.top = "-100px"; // hide navbar (adjust value to navbar height)
-    }
-    prevScrollPos = currentScrollPos;
+window.addEventListener('scroll', function() {
+  if (window.scrollY === 0) {
+    navbar.style.display = 'block';  // show at very top
+  } else {
+    navbar.style.display = 'none';   // hide when scrolling
   }
+});
 
-
+  
 document.addEventListener('DOMContentLoaded', function () {
     new Typed('#typed', {
       strings: ["Data Science Enthusiast", "AI Researcher", "ML Practitioner"],
