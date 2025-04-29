@@ -260,6 +260,22 @@ li {
 }
 
 /* Footer Icons */
+
+.contact {
+  position: fixed;
+  bottom: -100px; /* hide below the viewport */
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 999;
+}
+.contact.visible {
+  bottom: 0; /* slide up when visible */
+}
+
 .social-media-box {
   color: black;
   text-decoration: none;
