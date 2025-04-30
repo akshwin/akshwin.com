@@ -259,22 +259,34 @@ li {
   color: #fff;
 }
 
-/* Footer Icons */
-
-.contact {
+/* Back to Top Button */
+.back-to-top {
   position: fixed;
-  bottom: -100px; /* hide below the viewport */
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-  transition: bottom 0.3s ease-in-out;
-  z-index: 999;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 2px; /* Even smaller padding */
+  font-size: 18px; /* Reduced font size */
+  background-color: #343a40; /* Dark background color */
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
 }
-.contact.visible {
-  bottom: 0; /* slide up when visible */
+
+.back-to-top.show {
+  transform: scale(1); /* No scaling needed, keep the smaller size */
+  opacity: 1; /* Full opacity */
+  visibility: visible; /* Make it visible */
 }
+
+.back-to-top:hover {
+  background-color: #555; /* Lighter background on hover */
+}
+
+/* Footer Icons */
 
 .social-media-box {
   color: black;
@@ -282,6 +294,7 @@ li {
   position: relative;
   top: 6px;
 }
+
 
 /* Responsive (Mobile) */
 @media (max-width: 767px) {
