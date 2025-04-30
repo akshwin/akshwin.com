@@ -287,14 +287,12 @@ li {
 }
 
 /* Footer Icons */
-
 .social-media-box {
   color: black;
   text-decoration: none;
   position: relative;
   top: 6px;
 }
-
 
 /* Responsive (Mobile) */
 @media (max-width: 767px) {
