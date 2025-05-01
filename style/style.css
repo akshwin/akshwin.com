@@ -9,7 +9,7 @@ body {
   text-align: left;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #fafafa;
   scroll-behavior: smooth;
 }
 
@@ -287,6 +287,17 @@ li {
 }
 
 /* Footer Icons */
+.contact{
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 999;
+}
+
 .social-media-box {
   color: black;
   text-decoration: none;
