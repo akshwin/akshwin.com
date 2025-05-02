@@ -374,3 +374,10 @@ li {
     font-size: 1.2rem;
   }
 }
+
+.card img {
+  width: 100%;
+  height: 250px;         /* Set a fixed height */
+  object-fit: cover;     /* Fill the area nicely while preserving aspect ratio */
+  border-radius: 10px;   /* Optional: match card radius */
+}
