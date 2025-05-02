@@ -148,10 +148,13 @@ img {
   overflow: clip;
 }
 
+
+
 .img-fluid {
   max-width: 100%;
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: 100%;
+  border-radius: 0.25rem;
 }
 
 .rounded {
@@ -182,7 +185,7 @@ li {
 /* Education Section */
 .education-img-wrapper {
   width: 100%;
-  height: 250px;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -198,7 +201,7 @@ li {
 /* Project Section */
 .project-img-wrapper {
   width: 100%;
-  height: auto;
+  height: 200px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -261,6 +264,7 @@ li {
 }
 
 
+
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
@@ -293,11 +297,9 @@ li {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 15px 10px;
-  font-size: 1rem;
-  word-wrap: break-word;
   background-color: #fff;
   text-align: center;
+  padding: 15px 0;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   z-index: 999;
@@ -315,7 +317,7 @@ li {
   top: 6px;
 }
 
-/* Mobile (already provided) */
+/* Responsive (Mobile) */
 @media (max-width: 767px) {
   .hero {
     padding-top: 100px;
@@ -328,56 +330,4 @@ li {
   .nav-link {
     font-size: 1rem;
   }
-}
-
-/* Tablet (768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero {
-    padding-top: 120px;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
-  }
-}
-
-/* Small Laptop (992px to 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero {
-    padding-top: 140px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .nav-link {
-    font-size: 1.15rem;
-  }
-}
-
-/* Large Desktop (1200px and above) */
-@media (min-width: 1200px) {
-  .hero {
-    padding-top: 160px;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .nav-link {
-    font-size: 1.2rem;
-  }
-}
-
-.card img {
-  width: 100%;
-  height: 250px;         /* Set a fixed height */
-  object-fit: cover;     /* Fill the area nicely while preserving aspect ratio */
-  border-radius: 10px;   /* Optional: match card radius */
 }
