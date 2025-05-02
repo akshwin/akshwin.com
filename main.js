@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
   new Typed('#typed', {
     strings: [
       "Data Science Enthusiast",
-      "AI Researcher",
-      "ML Practitioner"
+      "Artificial Intelligence Researcher",
+      "Machine Learning Practitioner"
     ],
     typeSpeed: 50,
     backSpeed: 30,

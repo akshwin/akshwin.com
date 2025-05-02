@@ -31,7 +31,6 @@ section {
   width: 100%;
   z-index: 1000;
   transition: top 0.3s;
-  display: none;
 }
 
 .navbar-brand {
@@ -40,8 +39,8 @@ section {
 }
 
 .nav-item {
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
 }
 
 /* Hero Section Styles */
@@ -147,8 +146,6 @@ img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
-
-
 
 .img-fluid {
   max-width: 100%;
@@ -263,14 +260,11 @@ li {
   color: #fff;
 }
 
-
-
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none;
   padding: 2px; /* Even smaller padding */
   font-size: 18px; /* Reduced font size */
   background-color: #343a40; /* Dark background color */
@@ -317,17 +311,48 @@ li {
   top: 6px;
 }
 
-/* Responsive (Mobile) */
-@media (max-width: 767px) {
-  .hero {
-    padding-top: 100px;
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
   }
 
-  .section-title {
+  .hero-subtitle {
+    font-size: 1.25rem !important;
+  }
+
+  .navbar-brand {
     font-size: 1.5rem;
   }
 
-  .nav-link {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .btn-custom {
     font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .box-shadow-full {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .navbar {
+    flex-direction: column;
   }
 }
