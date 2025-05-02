@@ -57,3 +57,18 @@ backToTopBtn.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+  const footer = document.querySelector('.contact');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.offsetHeight;
+
+    // Show footer only when scrolled near bottom
+    if (scrollY + windowHeight >= bodyHeight - 10) {
+      footer.classList.add('show-footer');
+    } else {
+      footer.classList.remove('show-footer');
+    }
+  });
