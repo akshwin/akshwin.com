@@ -72,3 +72,16 @@ backToTopBtn.addEventListener('click', (e) => {
       footer.classList.remove('show-footer');
     }
   });
+
+  window.addEventListener("scroll", function () {
+    const contactFooter = document.querySelector(".contact");
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.body.scrollHeight;
+
+    if (scrollPosition >= pageHeight - 1) {
+      contactFooter.classList.add("show-footer");
+    } else {
+      contactFooter.classList.remove("show-footer");
+    }
+  });
+

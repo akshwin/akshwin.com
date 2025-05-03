@@ -175,14 +175,14 @@ li {
 
 /* Lead Text */
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.25rem !important ;
+  font-weight: 300 !important;
 }
 
 /* Education Section */
 .education-img-wrapper {
   width: 100%;
-  height: auto;
+  height: 250px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -295,7 +295,6 @@ li {
   text-align: center;
   padding: 15px 0;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   z-index: 999;
   transform: translateY(100%); /* Hide by default */
 }
