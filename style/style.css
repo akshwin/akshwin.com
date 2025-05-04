@@ -179,12 +179,13 @@ li {
 .lead {
   font-size: 1.25rem !important ;
   font-weight: 300 !important;
+  overflow: hidden;
 }
 
 /* Education Section */
 .education-img-wrapper {
   width: 100%;
-  height: 270px;
+  height: 300px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -200,7 +201,7 @@ li {
 /* Project Section */
 .project-img-wrapper {
   width: 100%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   border-radius: 12px;
 }
