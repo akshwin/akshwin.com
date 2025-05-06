@@ -84,4 +84,3 @@ backToTopBtn.addEventListener('click', (e) => {
       contactFooter.classList.remove("show-footer");
     }
   });
-
