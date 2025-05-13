@@ -34,13 +34,13 @@ section {
 }
 
 .navbar-brand {
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 1000;
+  font-size: 4rem;
 }
 
 .nav-item {
-  font-weight: 600 !important;
-  font-size: 1rem !important;
+  font-weight: 700 ;
+  font-size: 1.5rem ;
 }
 
 /* Hero Section Styles */
@@ -83,7 +83,7 @@ section {
 }
 
 .hero-title {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 700;
   margin-top: 10rem;
   overflow: hidden;
@@ -109,7 +109,7 @@ section {
   color: inherit;
   text-decoration: none;
   margin: 0 10px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .social-icons a:hover {
@@ -314,17 +314,6 @@ li {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem !important;
-  }
-
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
 
   .section-title {
     font-size: 1.6rem;
@@ -341,13 +330,6 @@ li {
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem ;
-  }
 
   .section-title {
     font-size: 1.4rem;
