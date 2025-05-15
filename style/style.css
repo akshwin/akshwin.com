@@ -34,13 +34,13 @@ section {
 }
 
 .navbar-brand {
-  font-weight: 1000;
-  font-size: 4rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .nav-item {
-  font-weight: 700 ;
-  font-size: 1.5rem ;
+  font-weight: 500 ;
+  font-size: 1rem ;
 }
 
 /* Hero Section Styles */
@@ -83,14 +83,14 @@ section {
 }
 
 .hero-title {
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-top: 10rem;
   overflow: hidden;
 }
 
 .hero-subtitle {
-  font-size: 4rem ;
+  font-size: 2rem ;
   font-weight: 500 ;
   overflow: hidden;
 }
@@ -109,7 +109,7 @@ section {
   color: inherit;
   text-decoration: none;
   margin: 0 10px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .social-icons a:hover {
