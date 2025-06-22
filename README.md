@@ -2,7 +2,6 @@
 
 Welcome to my personal portfolio website! This responsive and dynamic website showcases my skills, projects, education, experience, certifications, research publications, and more.
 
-![Portfolio Banner](./assets/images/akshwin.png)
 
 ## 🌐 Live Website
 
