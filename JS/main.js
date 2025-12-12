@@ -1,86 +1,232 @@
-// Navbar Show/Hide on Scroll
-const navbar = document.querySelector('.navbar');
+document.addEventListener("DOMContentLoaded", () => {
 
-// Always show navbar initially
-navbar.style.display = 'block';
+    // GSAP Plugins
+    gsap.registerPlugin(ScrollTrigger);
 
-// Handle navbar visibility on scroll
-window.addEventListener('scroll', function () {
-  if (window.scrollY === 0) {
-    navbar.style.display = 'block'; // Show navbar at the top
-  } else {
-    navbar.style.display = 'none'; // Hide navbar when scrolling down
-  }
+    // LOADING ANIMATION
+    const loader = document.querySelector('.loader');
+    const progress = document.querySelector('.loader-progress');
 
-  // Footer visibility on scroll end
-  const footer = document.getElementById('footer');
-  const scrollPosition = window.innerHeight + window.scrollY;
-  const pageHeight = document.documentElement.scrollHeight;
+    // Simulate loading
+    setTimeout(() => {
+        progress.style.width = '100%';
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            document.body.classList.remove('loading');
+            initAnimations(); // Start site animations
+        }, 800);
+    }, 1000);
 
-  if (scrollPosition >= pageHeight - 10) {
-    footer.classList.add('visible'); // Show footer
-  } else {
-    footer.classList.remove('visible'); // Hide footer
-  }
-});
+    // CUSTOM CURSOR
+    const cursor = document.querySelector('.cursor');
+    const follower = document.querySelector('.cursor-follower');
 
-// Typed.js Initialization after DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-  new Typed('#typed', {
-    strings: [
-      "Data Science Enthusiast",
-      "Artificial Intelligence Researcher",
-      "Machine Learning Practitioner"
-    ],
-    typeSpeed: 50,
-    backSpeed: 30,
-    backDelay: 1500,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|",
-  });
-});
+    if (window.matchMedia("(pointer: fine)").matches) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
 
-// Show/Hide the "Back to Top" button based on scroll position
-const backToTopBtn = document.querySelector('.back-to-top');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = 'block';
-  } else {
-    backToTopBtn.style.display = 'none';
-  }
-});
-
-// Scroll to top on button click
-backToTopBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-  const footer = document.querySelector('.contact');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.offsetHeight;
-
-    // Show footer only when scrolled near bottom
-    if (scrollY + windowHeight >= bodyHeight - 10) {
-      footer.classList.add('show-footer');
+            // Follower delay
+            setTimeout(() => {
+                follower.style.left = e.clientX + 'px';
+                follower.style.top = e.clientY + 'px';
+            }, 50);
+        });
     } else {
-      footer.classList.remove('show-footer');
+        cursor.style.display = 'none';
+        follower.style.display = 'none';
     }
-  });
 
-  window.addEventListener("scroll", function () {
-    const contactFooter = document.querySelector(".contact");
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const pageHeight = document.body.scrollHeight;
+    // TYPED TEXT
+    new Typed('.typing-text', {
+        strings: [
+            "Data Science Enthusiast",
+            "AI Researcher",
+            "Machine Learning Engineer",
+            "Deep Learning Specialist"
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true
+    });
 
-    if (scrollPosition >= pageHeight - 1) {
-      contactFooter.classList.add("show-footer");
-    } else {
-      contactFooter.classList.remove("show-footer");
+    // TILT EFFECT FOR CARDS
+    VanillaTilt.init(document.querySelectorAll(".project-card"), {
+        max: 10,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2
+    });
+
+    // MOBILE MENU
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
     }
-  });
+    // THEME TOGGLE
+    const themeBtn = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    // Check local storage
+    if (localStorage.getItem('theme') === 'light') {
+        body.classList.add('light-mode');
+        themeBtn.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+    }
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+
+            // Icon swap
+            const icon = themeBtn.querySelector('i');
+            if (isLight) {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+
+});
+
+function initAnimations() {
+
+    // Hero Animations
+    gsap.from(".hero-content", {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.2
+    });
+
+    // Section Headers Parallax
+    gsap.utils.toArray(".section-header").forEach(header => {
+        gsap.from(header, {
+            scrollTrigger: {
+                trigger: header,
+                start: "top 80%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+    });
+
+    // Skills Stagger
+    gsap.from(".tags span", {
+        scrollTrigger: {
+            trigger: ".skills-wrapper",
+            start: "top 85%"
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "back.out(1.7)"
+    });
+
+    // Timeline Items
+    gsap.utils.toArray(".timeline-item").forEach(item => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%"
+            },
+            x: -30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+    });
+
+    // Projects Parallax
+    gsap.utils.toArray(".project-card").forEach((card, i) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 90%"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: i * 0.2, // Stagger effect
+            ease: "power3.out"
+        });
+    });
+
+    // Research List
+    gsap.utils.toArray(".research-item").forEach(item => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 90%"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+    });
+
+    // CONTACT FORM HANDLING
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+
+            // Get form data
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success
+                    formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    // Error
+                    formStatus.textContent = '✗ Oops! Something went wrong. Please try again.';
+                    formStatus.className = 'form-status error';
+                }
+            } catch (error) {
+                // Network error
+                formStatus.textContent = '✗ Network error. Please check your connection and try again.';
+                formStatus.className = 'form-status error';
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.querySelector('.btn-text').textContent = 'Send Message';
+                submitBtn.style.opacity = '1';
+            }
+        });
+    }
+}

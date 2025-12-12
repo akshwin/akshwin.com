@@ -1,0 +1,59 @@
+/* Hero Image Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 50px;
+    }
+
+    .hero-right {
+        flex: 0 0 350px;
+    }
+
+    .hero-image-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .hero-image-glow {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        flex: 0 0 auto;
+    }
+
+    .hero-image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-image-glow {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .social-links-hero {
+        justify-content: center;
+    }
+}
