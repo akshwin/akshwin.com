@@ -186,9 +186,21 @@ function initContactForm() {
     }
 
     // Initialize EmailJS (replace with your public key)
-    // Get your keys from: https://dashboard.emailjs.com/admin/integration
+    // Get your keys from: https://dashboard.emailjs.com/admin/account
+    // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+    const EMAILJS_PUBLIC_KEY = 'DtI5iLgZ7ZQ-8OEhV';
+    const EMAILJS_SERVICE_ID = 'service_p7og81j';
+    const EMAILJS_TEMPLATE_ID = 'template_wjpx42a';
+    
     if (typeof emailjs !== 'undefined') {
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+        // Check if user has configured EmailJS
+        if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || 
+            EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || 
+            EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+            console.error('EmailJS not configured! Please update EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, and EMAILJS_TEMPLATE_ID in JS/main.js');
+        } else {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+        }
     }
 
     contactForm.addEventListener('submit', async function (e) {
@@ -226,12 +238,27 @@ function initContactForm() {
         // Log for debugging
         console.log('Sending form data via EmailJS:', templateParams);
 
+        // Check if EmailJS is configured
+        if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || 
+            EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || 
+            EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+            formStatus.textContent = '✗ EmailJS not configured. Please update the EmailJS credentials in JS/main.js. See EMAILJS_SETUP.md for instructions.';
+            formStatus.className = 'form-status error';
+            submitBtn.disabled = false;
+            if (btnText) {
+                btnText.textContent = 'Send Message';
+            } else {
+                submitBtn.innerHTML = '<span class="btn-text">Send Message</span><i class="fas fa-paper-plane"></i>';
+            }
+            submitBtn.style.opacity = '1';
+            return;
+        }
+
         try {
             // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
             const response = await emailjs.send(
-                'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
                 templateParams
             );
 
