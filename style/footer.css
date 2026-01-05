@@ -85,6 +85,31 @@
     transform: translateX(5px);
 }
 
+/* Social Grid in Footer */
+.footer-social {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-social .social-card {
+    padding: 20px;
+}
+
+.footer-social .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+}
+
+.footer-social .social-info h3 {
+    font-size: 1.1rem;
+}
+
+.footer-social .social-info p {
+    font-size: 0.85rem;
+}
+
 /* Mobile Responsive */
 @media (max-width: 900px) {
     .footer-content {
@@ -105,5 +130,14 @@
 
     .footer-brand h3 {
         font-size: 1.4rem;
+    }
+
+    .footer-social {
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .footer-social .social-card {
+        padding: 18px;
     }
 }

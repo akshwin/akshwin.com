@@ -56,4 +56,21 @@
     .social-links-hero {
         justify-content: center;
     }
+
+    .theme-toggle {
+        bottom: 180px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle i {
+        font-size: 1rem;
+    }
+
+    .scroll-indicator {
+        bottom: 30px;
+        right: 20px;
+        font-size: 0.7rem;
+    }
 }

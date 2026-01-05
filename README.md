@@ -15,8 +15,14 @@ Welcome to my personal portfolio website! This responsive and dynamic website sh
 
 .
 ├── index.html
+├── server.js          # Node.js backend server
+├── package.json       # Node.js dependencies
+├── .env              # Environment variables (create this)
 ├── style/
-│   └── style.css
+│   ├── style.css
+│   ├── contact.css
+│   ├── footer.css
+│   └── hero-responsive.css
 ├── JS/
 │   └── main.js
 ├── assets/
@@ -30,7 +36,9 @@ Welcome to my personal portfolio website! This responsive and dynamic website sh
 ## 🛠️ Technologies Used
 
 - **Frontend Framework**: HTML5, CSS3, Bootstrap 5
-- **Animations**: AOS (Animate on Scroll), Typed.js
+- **Backend**: Node.js, Express.js
+- **Email Service**: Nodemailer (Gmail)
+- **Animations**: GSAP, Typed.js
 - **Icons**: Bootstrap Icons, FontAwesome
 - **Responsive Design**: Mobile-first layout using Bootstrap Grid
 
@@ -49,7 +57,7 @@ Welcome to my personal portfolio website! This responsive and dynamic website sh
   - Conferences & Publications
   - Newsletter (Substack Embed)
 - 🌐 Social media & academic presence integration
-- 📧 Contact section with email link
+- 📧 Contact form with email functionality
 - 🔝 Back-to-top button
 
 ---
@@ -69,15 +77,57 @@ Welcome to my personal portfolio website! This responsive and dynamic website sh
 
 ## 📄 How to Run Locally
 
-1. Clone the repository or download the source files.
-2. Ensure the folder structure remains intact (`assets`, `style`, `JS`).
-3. Open `index.html` in any modern browser.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
 
+### Setup Instructions
+
+1. **Clone the repository**
 ```bash
 git clone https://github.com/akshwin/akshwin.com.git
 cd akshwin.com
-open index.html  # Or use any code editor + browser
-````
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Configure email settings**
+   - Create a `.env` file in the root directory
+   - Add your Gmail credentials:
+   ```
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-app-password
+   PORT=3000
+   ```
+   
+   **Important**: For Gmail, you need to use an App Password instead of your regular password:
+   - Go to your Google Account settings
+   - Enable 2-Step Verification
+   - Go to Security > 2-Step Verification > App Passwords
+   - Generate an app password for "Mail"
+   - Use that app password in the `.env` file
+
+4. **Start the server**
+```bash
+npm start
+```
+
+5. **Open your browser**
+   - Navigate to `http://localhost:3000`
+   - The contact form will now send emails to `akshwint.2003@gmail.com`
+
+### Development Mode (with auto-reload)
+```bash
+npm run dev
+```
+
+### Static Mode (without backend)
+If you just want to view the website without the contact form functionality:
+- Simply open `index.html` in your browser
+- The contact form will not work without the backend server running
 
 ---
 

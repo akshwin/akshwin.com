@@ -1,0 +1,492 @@
+/* ==========================================================================
+   NEW FEATURES CSS - Theme Toggle, Reading Progress, Modals, etc.
+   ========================================================================== */
+
+/* Reading Progress Indicator */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #00d4aa);
+    z-index: 9999;
+    transition: width 0.1s ease;
+    box-shadow: 0 2px 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Theme Toggle Button - Styles are in style.css */
+
+/* Light Mode Styles - Additional overrides */
+body.light-mode {
+    --bg-main: #ffffff;
+    --bg-darker: #f8f9fa;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --accent: #000000;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .hero-title,
+body.light-mode .hero-label,
+body.light-mode .hero-role,
+body.light-mode .hero-description {
+    color: #1a1a1a;
+}
+
+body.light-mode .scroll-indicator {
+    color: #1a1a1a;
+}
+
+body.light-mode .ref-title {
+    color: #1a1a1a;
+}
+
+body.light-mode .bio-text,
+body.light-mode .bio-text p,
+body.light-mode .bio-text strong {
+    color: #1a1a1a;
+}
+
+body.light-mode .stat-label,
+body.light-mode .stat-number {
+    color: #1a1a1a;
+}
+
+body.light-mode .edu-card,
+body.light-mode .research-item {
+    background: #ffffff;
+    border-color: #e0e0e0;
+}
+
+body.light-mode .edu-degree,
+body.light-mode .edu-institution,
+body.light-mode .edu-duration {
+    color: #1a1a1a;
+}
+
+body.light-mode .edu-achievements li {
+    color: #555555;
+}
+
+body.light-mode .edu-achievements li::before {
+    background: #000000;
+}
+
+body.light-mode .edu-tag-pill {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1a1a1a;
+    border-color: #e0e0e0;
+}
+
+body.light-mode .ref-title {
+    color: #1a1a1a;
+}
+
+body.light-mode .subtitle {
+    color: #666666;
+}
+
+body.light-mode .link-hover {
+    color: #1a1a1a;
+}
+
+body.light-mode .link-hover:hover {
+    color: #000000;
+}
+
+body.light-mode .footer {
+    background: #f8f9fa;
+    border-top-color: #e0e0e0;
+}
+
+body.light-mode .footer-brand h3,
+body.light-mode .footer-section h4,
+body.light-mode .footer-section a {
+    color: #1a1a1a;
+}
+
+body.light-mode .footer-section a:hover {
+    color: #000000;
+}
+
+body.light-mode .contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #e0e0e0;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #000000;
+}
+
+body.light-mode .form-group label {
+    color: #1a1a1a;
+}
+
+body.light-mode .social-card {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: #e0e0e0;
+}
+
+body.light-mode .social-card:hover {
+    border-color: #000000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .social-info h3 {
+    color: #1a1a1a;
+}
+
+body.light-mode .social-info p {
+    color: #666666;
+}
+
+body.light-mode .theme-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #e0e0e0;
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .reading-progress {
+    background: linear-gradient(90deg, #000000, #333333);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Card Actions */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-view-details {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+body.light-mode .btn-view-details {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+.btn-view-details:hover {
+    background: rgba(0, 255, 157, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+body.light-mode .btn-view-details:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #000000;
+    color: #000000;
+}
+
+/* Project Modal */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    background: var(--bg-darker);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    z-index: 10001;
+}
+
+.project-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10002;
+    font-size: 18px;
+}
+
+.modal-close:hover {
+    background: rgba(255, 77, 77, 0.2);
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 40px;
+    overflow-y: auto;
+    max-height: calc(90vh - 80px);
+}
+
+.modal-header {
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.modal-header .modal-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.modal-header .modal-tag {
+    padding: 6px 12px;
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--accent);
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.modal-section {
+    margin-bottom: 30px;
+}
+
+.modal-section h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-section p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.modal-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-tech-item {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.modal-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.modal-link {
+    padding: 12px 24px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.3);
+}
+
+.modal-link.secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.modal-link.secondary:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Light Mode Modal Adjustments */
+body.light-mode .modal-content {
+    background: #ffffff;
+    border-color: #e0e0e0;
+}
+
+body.light-mode .modal-close {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #e0e0e0;
+}
+
+body.light-mode .modal-link {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.light-mode .modal-link.secondary {
+    border-color: #000000;
+    color: #000000;
+}
+
+body.light-mode .modal-link.secondary:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 95vh;
+        border-radius: 15px;
+    }
+
+    .modal-body {
+        padding: 25px 20px;
+        max-height: calc(95vh - 60px);
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-image {
+        height: 200px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .btn-view-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-links {
+        flex-direction: column;
+    }
+
+    .modal-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Smooth scrollbar for modal */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 157, 0.8);
+}
+

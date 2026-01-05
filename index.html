@@ -4,7 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akshwin T </title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Akshwin T - AI/ML Engineer | R&D Engineer | AI Researcher</title>
+  <meta name="description" content="Akshwin T - R&D Engineer (AI/ML) at Intain Technologies. AI Researcher, Machine Learning Engineer, and Full-Stack Developer specializing in Computer Vision, Generative AI, and Deep Learning.">
+  <meta name="keywords" content="Akshwin T, AI Engineer, Machine Learning, Deep Learning, Computer Vision, Generative AI, AI Researcher, R&D Engineer, Portfolio">
+  <meta name="author" content="Akshwin T">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akshwin.github.io/akshwin.com/">
+  <meta property="og:title" content="Akshwin T - AI/ML Engineer | R&D Engineer | AI Researcher">
+  <meta property="og:description" content="R&D Engineer (AI/ML) at Intain Technologies. AI Researcher specializing in Machine Learning, Computer Vision, and Generative AI.">
+  <meta property="og:image" content="./assets/images/akshwin.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://akshwin.github.io/akshwin.com/">
+  <meta property="twitter:title" content="Akshwin T - AI/ML Engineer | R&D Engineer">
+  <meta property="twitter:description" content="R&D Engineer (AI/ML) at Intain Technologies. AI Researcher specializing in Machine Learning, Computer Vision, and Generative AI.">
+  <meta property="twitter:image" content="./assets/images/akshwin.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://akshwin.github.io/akshwin.com/">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +47,8 @@
   <link rel="stylesheet" href="./style/contact.css">
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/hero-responsive.css">
+  <link rel="stylesheet" href="./style/improvements.css">
+  <link rel="stylesheet" href="./style/new-features.css">
   <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -41,21 +66,28 @@
     </div>
   </div>
 
+  <!-- Reading Progress Indicator -->
+  <div class="reading-progress" id="readingProgress"></div>
+
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="#" class="logo">Akshwin T<span class="dot"></span></a>
-    <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#research" class="nav-link">Research</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <div class="nav-left">
+      <a href="#" class="logo">Akshwin T<span class="dot"></span></a>
     </div>
-    <div class="menu-toggle">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
@@ -101,6 +133,9 @@
             <div class="hero-actions">
               <a href="#work" class="btn btn-primary">View My Work</a>
               <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+              <a href="https://drive.google.com/uc?export=download&id=1hr3THK3NecBImLuVINSzDMc9_9RtRedg" target="_blank" class="btn btn-outline" id="resumeBtn">
+                <i class="fas fa-download"></i> Download Resume
+              </a>
             </div>
             <div class="social-links-hero">
               <a href="https://github.com/akshwin" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -115,12 +150,15 @@
 
           <div class="hero-right">
             <div class="hero-image-wrapper">
-              <img src="./assets/images/akshwin.png" alt="Akshwin T" class="hero-image">
+              <img loading="lazy" src="./assets/images/akshwin.png" alt="Akshwin T" class="hero-image">
               <div class="hero-image-glow"></div>
             </div>
           </div>
         </div>
 
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" type="button">
+          <i class="fas fa-sun"></i>
+        </button>
         <div class="scroll-indicator">
           <span>Scroll</span>
           <div class="line"></div>
@@ -259,7 +297,7 @@
                 <!-- Card 1: VIT -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/vit.webp" alt="VIT Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/vit.webp" alt="VIT Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">B.Tech · Computer Science & Engineering</div>
                       <div class="edu-institution">Vellore Institute of Technology, Vellore</div>
@@ -295,7 +333,7 @@
                 <!-- Card 2: Amrita -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/amrita.jpeg" alt="Amrita Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/amrita.jpeg" alt="Amrita Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">Higher Secondary (XII)</div>
                       <div class="edu-institution">Amrita Vidyalayam, Kanyakumari</div>
@@ -325,7 +363,7 @@
                 <!-- Card 3: Vivekananda -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/vkv.webp" alt="Vivekananda Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/vkv.webp" alt="Vivekananda Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">Secondary School (X)</div>
                       <div class="edu-institution">Vivekananda Kendra Vidyalaya</div>
@@ -376,7 +414,7 @@
                 <!-- Card 1: Intain -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/intain.png" alt="Intain Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/intain.png" alt="Intain Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">R&D Engineer (AI/ML)</div>
                       <div class="edu-institution">Intain Technologies</div>
@@ -411,7 +449,7 @@
                 <!-- Card 2: KuppiSmart -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/kuppi.jpeg" alt="KuppiSmart Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/kuppi.jpeg" alt="KuppiSmart Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">AI/ML Intern</div>
                       <div class="edu-institution">KuppiSmart Solutions</div>
@@ -458,13 +496,21 @@
 
               <!-- Content -->
               <div class="work-content">
+                <!-- Project Filters -->
+                <div class="project-filters">
+                  <button class="filter-btn active" data-filter="all">All Projects</button>
+                  <button class="filter-btn" data-filter="medical">Medical AI</button>
+                  <button class="filter-btn" data-filter="vision">Computer Vision</button>
+                  <button class="filter-btn" data-filter="space">Space Tech</button>
+                  <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+                </div>
+                
                 <div class="projects-grid">
                   <!-- Project 1 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="medical deep-learning" data-project="brain-tumor">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/tumor.jpg" alt="Brain Tumor Classifier">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/tumor.jpg" alt="Brain Tumor Classifier">
                       </div>
                       <div class="card-content">
                         <h3>Brain Tumor Classifier</h3>
@@ -472,18 +518,20 @@
                         <div class="card-tags">
                           <span>Deep Learning</span><span>Medical AI</span>
                         </div>
-                        <a href="https://brain-tumor-classifiers.streamlit.app/" target="_blank" class="btn-arrow">View
-                          Project <i class="bi bi-arrow-up-right"></i></a>
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="brain-tumor">View Details</button>
+                          <a href="https://brain-tumor-classifiers.streamlit.app/" target="_blank" class="btn-arrow">View
+                            Project <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
 
                   <!-- Project 2 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="vision deep-learning" data-project="lane-detection">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/lane.webp" alt="Lane Detection">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/lane.webp" alt="Lane Detection">
                       </div>
                       <div class="card-content">
                         <h3>Lane Detection U-Net</h3>
@@ -491,19 +539,21 @@
                         <div class="card-tags">
                           <span>Computer Vision</span><span>Autonomous</span>
                         </div>
-                        <a href="https://lane-detection-cascaded-unet.streamlit.app/" target="_blank"
-                          class="btn-arrow">View
-                          Project <i class="bi bi-arrow-up-right"></i></a>
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="lane-detection">View Details</button>
+                          <a href="https://lane-detection-cascaded-unet.streamlit.app/" target="_blank"
+                            class="btn-arrow">View
+                            Project <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
 
                   <!-- Project 3 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="medical deep-learning" data-project="ich-detector">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/hamorrhage.jpg" alt="ICH Detector">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/hamorrhage.jpg" alt="ICH Detector">
                       </div>
                       <div class="card-content">
                         <h3>ICH Detector</h3>
@@ -511,18 +561,20 @@
                         <div class="card-tags">
                           <span>Attention Models</span><span>Healthcare</span>
                         </div>
-                        <a href="https://intracranial-hemorrhage-detector.streamlit.app/" target="_blank"
-                          class="btn-arrow">View Project <i class="bi bi-arrow-up-right"></i></a>
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="ich-detector">View Details</button>
+                          <a href="https://intracranial-hemorrhage-detector.streamlit.app/" target="_blank"
+                            class="btn-arrow">View Project <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
 
                   <!-- Project 4 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="space deep-learning" data-project="storm-predictor">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/dst.jpg" alt="DST Predictor">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/dst.jpg" alt="DST Predictor">
                       </div>
                       <div class="card-content">
                         <h3>Storm Predictor</h3>
@@ -530,18 +582,20 @@
                         <div class="card-tags">
                           <span>Space Tech</span><span>NASA Data</span>
                         </div>
-                        <a href="https://dst-predictor.streamlit.app/" target="_blank" class="btn-arrow">View Project <i
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="storm-predictor">View Details</button>
+                          <a href="https://dst-predictor.streamlit.app/" target="_blank" class="btn-arrow">View Project <i
                             class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
 
                   <!-- Project 5 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="medical deep-learning" data-project="tb-detector">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/tuberculosis.jpg" alt="Tuberculosis Detector">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/tuberculosis.jpg" alt="Tuberculosis Detector">
                       </div>
                       <div class="card-content">
                         <h3>TB Detector</h3>
@@ -549,18 +603,20 @@
                         <div class="card-tags">
                           <span>Medical AI</span><span>Ensemble</span>
                         </div>
-                        <a href="https://tuberculosis-detector.streamlit.app/" target="_blank" class="btn-arrow">View
-                          Project <i class="bi bi-arrow-up-right"></i></a>
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="tb-detector">View Details</button>
+                          <a href="https://tuberculosis-detector.streamlit.app/" target="_blank" class="btn-arrow">View
+                            Project <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
 
                   <!-- Project 7 -->
-                  <article class="project-card" data-tilt>
+                  <article class="project-card" data-category="medical deep-learning" data-project="alzheimers">
                     <div class="card-inner">
                       <div class="card-image">
-                        <img src="./assets/images/alzheimer.jpeg" alt="Alzheimers Classifier">
-                        <div class="overlay"></div>
+                        <img loading="lazy" src="./assets/images/alzheimer.jpeg" alt="Alzheimers Classifier">
                       </div>
                       <div class="card-content">
                         <h3>Alzheimer's AI</h3>
@@ -568,9 +624,12 @@
                         <div class="card-tags">
                           <span>Neuroscience</span><span>Deep Learning</span>
                         </div>
-                        <a href="https://alzheimer-stage-classifier.streamlit.app/" target="_blank"
-                          class="btn-arrow">View
-                          Project <i class="bi bi-arrow-up-right"></i></a>
+                        <div class="card-actions">
+                          <button class="btn-view-details" data-project="alzheimers">View Details</button>
+                          <a href="https://alzheimer-stage-classifier.streamlit.app/" target="_blank"
+                            class="btn-arrow">View
+                            Project <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
                       </div>
                     </div>
                   </article>
@@ -685,7 +744,7 @@
                 <!-- Card 1: Intain -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/OpenXHealth.png" alt="Intain Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/OpenXHealth.png" alt="Intain Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">Founder</div>
                       <div class="edu-institution">OpenXHealth</div>
@@ -718,7 +777,7 @@
                 <!-- Card 2: KuppiSmart -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img src="./assets/images/e2pc.jpeg" alt="E2PC Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/e2pc.jpeg" alt="E2PC Logo" class="edu-logo">
                     <div class="edu-info">
                       <div class="edu-degree">Secretary</div>
                       <div class="edu-institution">Energy and Environment Protection Club, VIT, Vellore</div>
@@ -759,75 +818,38 @@
                   <h2 class="ref-title">Get In Touch<span class="dot"></span></h2>
                 </div>
 
-                <!-- Replace lines 684-717 in your index.html with this code -->
-
-                <div class="social-grid">
-                  <a href="https://github.com/akshwin" target="_blank" class="social-card github">
-                    <div class="social-icon">
-                      <i class="fab fa-github"></i>
+                <!-- Contact Form Section -->
+                <div class="contact-form-wrapper">
+                  <p class="contact-intro">Have a project in mind or want to collaborate? Drop me a message!</p>
+                  
+                  <form id="contactForm" class="contact-form" action="/api/contact" method="POST">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required placeholder="Your name">
                     </div>
-                    <div class="social-info">
-                      <h3>GitHub</h3>
-                      <p>Check out my code & projects</p>
+                    
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
-
-                  <a href="https://www.linkedin.com/in/akshwin/" target="_blank" class="social-card linkedin">
-                    <div class="social-icon">
-                      <i class="fab fa-linkedin-in"></i>
+                    
+                    <div class="form-group">
+                      <label for="subject">Subject</label>
+                      <input type="text" id="subject" name="subject" required placeholder="What's this about?">
                     </div>
-                    <div class="social-info">
-                      <h3>LinkedIn</h3>
-                      <p>Let's connect professionally</p>
+                    
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or idea..."></textarea>
                     </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
-
-                  <a href="https://x.com/the_akshwin" target="_blank" class="social-card twitter">
-                    <div class="social-icon">
-                      <i class="fab fa-x-twitter"></i>
-                    </div>
-                    <div class="social-info">
-                      <h3>X (Twitter)</h3>
-                      <p>Follow for tech insights</p>
-                    </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
-
-                  <a href="https://medium.com/@akshwin" target="_blank" class="social-card medium">
-                    <div class="social-icon">
-                      <i class="fab fa-medium"></i>
-                    </div>
-                    <div class="social-info">
-                      <h3>Medium</h3>
-                      <p>Read my articles & blogs</p>
-                    </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
-
-                  <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank"
-                    class="social-card scholar">
-                    <div class="social-icon">
-                      <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="social-info">
-                      <h3>Google Scholar</h3>
-                      <p>View my research papers</p>
-                    </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
-
-                  <a href="mailto:akshwint.2003@gmail.com" class="social-card email">
-                    <div class="social-icon">
-                      <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="social-info">
-                      <h3>Email</h3>
-                      <p>Send a mail about ideas</p>
-                    </div>
-                    <i class="fas fa-arrow-right social-arrow"></i>
-                  </a>
+                    
+                    <button type="submit" id="submitBtn" class="btn btn-primary submit-btn">
+                      <span class="btn-text">Send Message</span>
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <div id="formStatus" class="form-status"></div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -870,9 +892,24 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </footer>
-  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Project Modals -->
+  <div id="projectModal" class="project-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content will be dynamically inserted -->
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -882,6 +919,18 @@
 
   <!-- Custom JS -->
   <script src="./JS/main.js"></script>
+  <script src="./JS/new-features.js"></script>
+
+  <!-- Google Analytics (Replace with your tracking ID) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
 </body>
 
 </html>
