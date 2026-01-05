@@ -198,13 +198,13 @@ img {
   font-weight: 700;
   letter-spacing: 5px;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--text-main);
 }
 
 .loader-bar {
   width: 200px;
   height: 2px;
-  background: #333;
+  background: var(--border-color);
   position: relative;
   overflow: hidden;
 }
@@ -1044,7 +1044,7 @@ body.light-mode .btn-primary:hover {
 }
 
 body.light-mode .edu-logo {
-  background: #ffffff;
+  background: var(--card-bg);
 }
 
 .edu-info {
@@ -1332,7 +1332,7 @@ body.light-mode .edu-logo {
    TIMELINE (EXPERIENCE & EDUCATION)
    ========================================================================== */
 .timeline {
-  border-left: 1px solid #333;
+  border-left: 1px solid var(--border-color);
   padding-left: 40px;
   /* Reduced slightly to fit logo */
   margin-left: 20px;
@@ -1382,7 +1382,7 @@ body.light-mode .edu-logo {
 }
 
 body.light-mode .timeline-logo {
-  background: #ffffff;
+  background: var(--card-bg);
 }
 
 .timeline-logo img {
@@ -1565,16 +1565,16 @@ body.light-mode .card-tags span {
   display: flex;
   flex-direction: column;
   padding: 40px;
-  border: 1px solid #222;
-  background: #111;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
   transition: transform 0.3s ease, background 0.3s ease;
   height: 100%;
   position: relative;
 }
 
 .research-item:hover {
-  background: #161616;
-  border-color: #333;
+  background: var(--bg-darker);
+  border-color: var(--accent);
   transform: translateY(-5px);
 }
 
@@ -1625,7 +1625,7 @@ body.light-mode .card-tags span {
   left: 0;
   width: 0;
   height: 1px;
-  background: #fff;
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 
@@ -1660,7 +1660,7 @@ body.light-mode .card-tags span {
 
 .email-link:hover {
   color: var(--text-main);
-  border-color: #fff;
+  border-color: var(--accent);
 }
 
 .footer-bottom {
@@ -1685,12 +1685,12 @@ body.light-mode .card-tags span {
 }
 
 .social-links-footer a:hover {
-  color: #fff;
+  color: var(--accent);
 }
 
 .copyright {
   font-size: 0.8rem;
-  color: #444;
+  color: var(--text-muted);
 }
 
 /* ==========================================================================

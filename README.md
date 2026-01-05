@@ -36,8 +36,8 @@ Welcome to my personal portfolio website! This responsive and dynamic website sh
 ## 🛠️ Technologies Used
 
 - **Frontend Framework**: HTML5, CSS3, Bootstrap 5
-- **Backend**: Node.js, Express.js
-- **Email Service**: Nodemailer (Gmail)
+- **Backend**: Node.js, Express.js (for local development)
+- **Email Service**: EmailJS (for GitHub Pages) / Nodemailer (for local development)
 - **Animations**: GSAP, Typed.js
 - **Icons**: Bootstrap Icons, FontAwesome
 - **Responsive Design**: Mobile-first layout using Bootstrap Grid
@@ -128,6 +128,35 @@ npm run dev
 If you just want to view the website without the contact form functionality:
 - Simply open `index.html` in your browser
 - The contact form will not work without the backend server running
+
+---
+
+## 🚀 GitHub Pages Deployment
+
+This website is configured to work on **GitHub Pages** (static hosting). Since GitHub Pages doesn't support Node.js backends, the contact form uses **EmailJS** for email functionality.
+
+### Setup for GitHub Pages
+
+1. **Configure EmailJS** (Required for contact form)
+   - Follow the detailed instructions in [`EMAILJS_SETUP.md`](./EMAILJS_SETUP.md)
+   - You'll need to:
+     - Create an EmailJS account (free tier: 200 emails/month)
+     - Set up an email service (Gmail)
+     - Create an email template
+     - Update `JS/main.js` with your EmailJS credentials
+
+2. **Deploy to GitHub Pages**
+   - Push your code to GitHub
+   - Go to repository Settings → Pages
+   - Select source branch (usually `main` or `master`)
+   - Your site will be live at `https://yourusername.github.io/akshwin.com/`
+
+### Important Notes
+
+- **Backend server (`server.js`)** is only needed for local development
+- **EmailJS** handles contact form submissions on GitHub Pages
+- The website works as a static site - no server required for deployment
+- See [`EMAILJS_SETUP.md`](./EMAILJS_SETUP.md) for complete EmailJS configuration guide
 
 ---
 

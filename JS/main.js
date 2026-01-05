@@ -174,7 +174,7 @@ function initAnimations() {
     });
 }
 
-// CONTACT FORM HANDLING - Separate function to initialize immediately
+// CONTACT FORM HANDLING - Using EmailJS for GitHub Pages compatibility
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -185,8 +185,21 @@ function initContactForm() {
         return;
     }
 
+    // Initialize EmailJS (replace with your public key)
+    // Get your keys from: https://dashboard.emailjs.com/admin/integration
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+    }
+
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault(); // Always prevent default form submission
+
+        // Check if EmailJS is loaded
+        if (typeof emailjs === 'undefined') {
+            formStatus.textContent = '✗ Email service not configured. Please check EmailJS setup.';
+            formStatus.className = 'form-status error';
+            return;
+        }
 
         // Disable button and show loading state
         submitBtn.disabled = true;
@@ -200,52 +213,50 @@ function initContactForm() {
         formStatus.textContent = '';
         formStatus.className = 'form-status';
 
-        // Get form data and convert to JSON
+        // Get form data
         const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name') || '',
-            email: formData.get('email') || '',
+        const templateParams = {
+            from_name: formData.get('name') || '',
+            from_email: formData.get('email') || '',
             subject: formData.get('subject') || '',
-            message: formData.get('message') || ''
+            message: formData.get('message') || '',
+            to_email: 'akshwint.2003@gmail.com'
         };
 
         // Log for debugging
-        console.log('Sending form data:', data);
+        console.log('Sending form data via EmailJS:', templateParams);
 
         try {
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            });
+            // Send email using EmailJS
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            const response = await emailjs.send(
+                'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
+                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                templateParams
+            );
 
-            // Check if response is JSON
-            const contentType = response.headers.get('content-type');
-            if (contentType && contentType.includes('application/json')) {
-                const data = await response.json();
-
-                if (response.ok && data.success) {
-                    // Success
-                    formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-                    formStatus.className = 'form-status success';
-                    contactForm.reset();
-                } else {
-                    // Error
-                    const errorMsg = data.error || 'Oops! Something went wrong. Please try again.';
-                    formStatus.textContent = '✗ ' + errorMsg;
-                    formStatus.className = 'form-status error';
-                }
+            // Success
+            if (response.status === 200) {
+                formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
             } else {
-                // Non-JSON response (likely HTML error page)
-                throw new Error('Server returned non-JSON response. Make sure the backend server is running.');
+                throw new Error('Unexpected response status');
             }
         } catch (error) {
-            // Network error or server not running
-            console.error('Form submission error:', error);
-            formStatus.textContent = '✗ Server error. Please make sure the backend server is running (npm start).';
+            // Error handling
+            console.error('EmailJS error:', error);
+            let errorMsg = 'Failed to send message. Please try again later.';
+            
+            if (error.text) {
+                errorMsg = '✗ ' + error.text;
+            } else if (error.message) {
+                errorMsg = '✗ ' + error.message;
+            } else {
+                errorMsg = '✗ ' + errorMsg;
+            }
+            
+            formStatus.textContent = errorMsg;
             formStatus.className = 'form-status error';
         } finally {
             // Re-enable button

@@ -254,9 +254,13 @@ body.light-mode .filter-btn.active {
 
 .btn-outline:hover {
     background: var(--accent);
-    color: #000;
+    color: var(--bg-color);
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 255, 157, 0.3);
+}
+
+body.light-mode .btn-outline:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-actions {
