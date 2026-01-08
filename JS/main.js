@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // MOBILE MENU
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-links a');
 
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
@@ -69,6 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
             menuToggle.classList.toggle('open');
         });
     }
+
+    // Close mobile menu when clicking a link
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuToggle.classList.remove('open');
+        });
+    });
+
+    // SMOOTH SCROLL FOR LOGO
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ACTIVE NAVIGATION HIGHLIGHTING
+    initActiveNavigation();
+
     // CONTACT FORM HANDLING - Initialize immediately
     initContactForm();
 
@@ -84,13 +109,41 @@ document.addEventListener("DOMContentLoaded", () => {
     // THEME TOGGLE
     initThemeToggle();
 
-    // READING PROGRESS
-    initReadingProgress();
-
     // PROJECT MODALS
     initProjectModals();
 
+    // FOOTER EMAIL COPY TO CLIPBOARD
+    initFooterEmailCopy();
+
 });
+
+// FOOTER EMAIL COPY TO CLIPBOARD
+function initFooterEmailCopy() {
+    const footerEmail = document.querySelector('.footer-email');
+    if (!footerEmail) return;
+
+    footerEmail.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const email = 'akshwint.2003@gmail.com';
+        
+        try {
+            await navigator.clipboard.writeText(email);
+            
+            // Visual feedback
+            const originalText = footerEmail.innerHTML;
+            footerEmail.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            footerEmail.style.color = 'var(--accent)';
+            
+            setTimeout(() => {
+                footerEmail.innerHTML = originalText;
+                footerEmail.style.color = '';
+            }, 2000);
+        } catch (err) {
+            // Fallback: open mail client
+            window.location.href = `mailto:${email}`;
+        }
+    });
+}
 
 function initAnimations() {
 
@@ -418,4 +471,59 @@ function initAnimatedCounters() {
     counters.forEach(counter => {
         observer.observe(counter);
     });
+}
+
+// ACTIVE NAVIGATION HIGHLIGHTING
+function initActiveNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    if (navLinks.length === 0 || sections.length === 0) return;
+
+    // Smooth scroll for anchor links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    e.preventDefault();
+                    const offsetTop = targetSection.offsetTop - 80; // Account for navbar height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Update active nav link on scroll
+    function updateActiveNav() {
+        const scrollPosition = window.scrollY + 150; // Offset for better detection
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // Handle top of page
+        if (window.scrollY < 100) {
+            navLinks.forEach(link => link.classList.remove('active'));
+        }
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav(); // Initial check
 }
