@@ -145,8 +145,8 @@
 }
 
 body.light-mode .back-to-top {
-    background: #000000;
-    color: #ffffff;
+    background: var(--gradient-bright);
+    color: var(--on-accent);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -217,9 +217,9 @@ body.light-mode .filter-btn:hover {
 }
 
 body.light-mode .filter-btn.active {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
+    background: var(--gradient-bright);
+    color: var(--on-accent);
+    border-color: transparent;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 

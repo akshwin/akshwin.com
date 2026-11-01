@@ -2,14 +2,19 @@
    RESET & VARIABLES
    ========================================================================== */
 :root {
-  --bg-color: #050505;
-  --bg-darker: #020202;
-  --text-main: #e0e0e0;
-  --text-muted: #888888;
-  --accent: #ffffff;
-  --accent-secondary: #333333;
-  --card-bg: #111;
-  --border-color: #333;
+  --bg-color: #0a0a0a;
+  --bg-darker: #070707;
+  --text-main: #ececec;
+  --text-muted: #a3a3a3;
+  --accent: #d4af37;
+  --accent-2: #f5d77a;
+  --accent-secondary: #1f1a0e;
+  --card-bg: #151515;
+  --border-color: #2a2620;
+  --gradient: linear-gradient(135deg, #b8902a 0%, #f5d77a 100%);
+  --gradient-bright: linear-gradient(135deg, #d4af37 0%, #f5d77a 100%);
+  --on-accent: #0a0a0a;
+  --glow: 0 10px 40px rgba(212, 175, 55, 0.2);
 
   --font-display: 'Syncopate', sans-serif;
   --font-body: 'Space Grotesk', sans-serif;
@@ -18,14 +23,17 @@
 }
 
 body.light-mode {
-  --bg-color: #ffffff;
-  --bg-darker: #f5f5f5;
+  --bg-color: #faf8f3;
+  --bg-darker: #f3efe4;
   --text-main: #1a1a1a;
-  --text-muted: #555555;
-  --accent: #000000;
-  --accent-secondary: #e0e0e0;
+  --text-muted: #5c5648;
+  --accent: #8a6d14;
+  --accent-2: #9a7b1c;
+  --accent-secondary: #e8e1cf;
   --card-bg: #ffffff;
-  --border-color: #e0e0e0;
+  --border-color: #e8e1cf;
+  --gradient: linear-gradient(135deg, #6b5410 0%, #a8861f 100%);
+  --glow: 0 10px 30px rgba(154, 123, 28, 0.18);
 }
 
 /* Light mode specific overrides */
@@ -79,9 +87,8 @@ body.light-mode .mobile-links a {
 
 /* Theme Toggle Button - Right side above scroll indicator */
 .theme-toggle {
-  position: absolute;
-  bottom: 200px;
-  right: 50px;
+  position: relative;
+  flex-shrink: 0;
   width: 45px;
   height: 45px;
   background: rgba(255, 255, 255, 0.05);
@@ -150,9 +157,14 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
   padding-top: 40px;
-  /* Custom cursor */
+}
+
+/* Custom cursor only for mouse users who haven't asked for reduced motion */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body {
+    cursor: none;
+  }
 }
 
 a {
@@ -427,6 +439,10 @@ a:hover~.cursor-follower,
 .menu-toggle {
   display: none;
   cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 8px;
+  color: inherit;
   z-index: 101;
   /* Above navbar */
 }

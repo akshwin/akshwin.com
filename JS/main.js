@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
 
-    if (window.matchMedia("(pointer: fine)").matches) {
+    if (window.matchMedia("(pointer: fine) and (prefers-reduced-motion: no-preference)").matches) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
@@ -40,10 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // TYPED TEXT
     new Typed('.typing-text', {
         strings: [
-            "Data Science Enthusiast",
-            "AI Researcher",
-            "Machine Learning Engineer",
-            "Deep Learning Specialist"
+            "AI Engineer",
+            "Fitness Enthusiast"
         ],
         typeSpeed: 50,
         backSpeed: 30,
@@ -64,34 +62,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-links a');
 
+    const setMenu = (open) => {
+        mobileMenu.classList.toggle('active', open);
+        menuToggle.classList.toggle('open', open);
+        menuToggle.setAttribute('aria-expanded', open);
+        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
     if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            menuToggle.classList.toggle('open');
+        menuToggle.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('active')));
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                setMenu(false);
+                menuToggle.focus();
+            }
         });
     }
 
     // Close mobile menu when clicking a link
     mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            menuToggle.classList.remove('open');
-        });
+        link.addEventListener('click', () => setMenu(false));
     });
 
-    // SMOOTH SCROLL FOR LOGO
-    const logo = document.querySelector('.logo');
-    if (logo) {
-        logo.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-    // ACTIVE NAVIGATION HIGHLIGHTING
+    // PAGE NAVIGATION
     initActiveNavigation();
 
     // CONTACT FORM HANDLING - Initialize immediately
@@ -146,6 +139,7 @@ function initFooterEmailCopy() {
 }
 
 function initAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     // Hero Animations
     gsap.from(".hero-content", {
@@ -473,57 +467,34 @@ function initAnimatedCounters() {
     });
 }
 
-// ACTIVE NAVIGATION HIGHLIGHTING
+// PAGE NAVIGATION: sections are grouped into pages via data-page.
+// The URL hash is either a page name (#career) or a section id (#contact).
 function initActiveNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section[id]');
+    const sections = [...document.querySelectorAll('main section[data-page]')];
 
-    if (navLinks.length === 0 || sections.length === 0) return;
+    function showPage(moveFocus) {
+        const hash = location.hash.slice(1) || 'home';
+        const target = document.getElementById(hash);
+        const page = sections.some(s => s.dataset.page === hash) ? hash : target?.dataset.page;
+        // Ignore hashes that aren't pages (e.g. the #main skip link)
+        if (!page) return;
 
-    // Smooth scroll for anchor links
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href.startsWith('#')) {
-                const targetId = href.substring(1);
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    e.preventDefault();
-                    const offsetTop = targetSection.offsetTop - 80; // Account for navbar height
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    // Update active nav link on scroll
-    function updateActiveNav() {
-        const scrollPosition = window.scrollY + 150; // Offset for better detection
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
+        sections.forEach(section => { section.hidden = section.dataset.page !== page; });
+        navLinks.forEach(link => {
+            const isActive = link.getAttribute('href') === `#${page}`;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
         });
 
-        // Handle top of page
-        if (window.scrollY < 100) {
-            navLinks.forEach(link => link.classList.remove('active'));
-        }
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+        if (moveFocus) document.getElementById('main').focus({ preventScroll: true });
+        // A section deeper in the page (e.g. #contact) scrolls to itself; a page name goes to the top
+        if (target && target !== sections.find(s => s.dataset.page === page)) target.scrollIntoView();
+        else window.scrollTo(0, 0);
     }
 
-    window.addEventListener('scroll', updateActiveNav);
-    updateActiveNav(); // Initial check
+    window.addEventListener('hashchange', () => showPage(true));
+    showPage(false);
 }

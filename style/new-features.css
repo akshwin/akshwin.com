@@ -19,12 +19,12 @@
 
 /* Light Mode Styles - Additional overrides */
 body.light-mode {
-    --bg-main: #ffffff;
-    --bg-darker: #f8f9fa;
+    --bg-main: #faf8f3;
+    --bg-darker: #f3efe4;
     --text-main: #1a1a1a;
-    --text-muted: #666666;
-    --accent: #000000;
-    --border-color: #e0e0e0;
+    --text-muted: #5c5648;
+    --accent: #8a6d14;
+    --border-color: #e8e1cf;
     --card-bg: #ffffff;
 }
 
@@ -76,7 +76,7 @@ body.light-mode .edu-achievements li {
 }
 
 body.light-mode .edu-achievements li::before {
-    background: #000000;
+    background: transparent;
 }
 
 body.light-mode .edu-tag-pill {
@@ -494,3 +494,258 @@ body.light-mode .modal-link.secondary:hover {
     background: rgba(0, 255, 157, 0.8);
 }
 
+
+/* ==========================================================================
+   GOLD & BLACK THEME — gradients, glows, dot grid, background blobs
+   ========================================================================== */
+
+/* Let the fixed background layers show through */
+body {
+    background-color: transparent;
+}
+
+.bg-darker {
+    background-color: rgba(7, 7, 7, 0.55);
+}
+
+body.light-mode .bg-darker {
+    background-color: rgba(243, 239, 228, 0.6);
+}
+
+/* Light theme vars live on body, so html (the visible canvas) needs its own */
+html:has(body.light-mode) {
+    background-color: #faf8f3;
+}
+
+.navbar {
+    background: rgba(10, 10, 10, 0.75);
+}
+
+/* Dot grid */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, #000 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 90%);
+}
+
+/* Drifting glow blobs */
+body::after {
+    content: '';
+    position: fixed;
+    inset: -20%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 25%, rgba(212, 175, 55, 0.14), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(245, 215, 122, 0.08), transparent 35%),
+        radial-gradient(circle at 60% 10%, rgba(184, 144, 42, 0.08), transparent 30%);
+    filter: blur(40px);
+    animation: blob-drift 22s ease-in-out infinite alternate;
+}
+
+body.light-mode::after {
+    opacity: 0.6;
+}
+
+@keyframes blob-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(4%, -3%) scale(1.08); }
+    100% { transform: translate(-3%, 4%) scale(0.96); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::after { animation: none; }
+}
+
+/* Gradient text */
+.hero-title .reveal-text,
+.ref-title,
+body.light-mode .ref-title,
+.stat-number,
+body.light-mode .stat-number,
+.score-val,
+.footer-brand h3 {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ref-title::after {
+    background: var(--gradient);
+}
+
+.dot,
+.ref-title .dot {
+    color: var(--accent-2);
+    -webkit-text-fill-color: var(--accent-2);
+}
+
+/* Gradient buttons */
+.btn-primary {
+    background: var(--gradient-bright);
+    color: var(--on-accent);
+    border: 1px solid transparent;
+    box-shadow: var(--glow);
+}
+
+.btn-primary:hover,
+body.light-mode .btn-primary:hover {
+    background: var(--gradient-bright);
+    color: var(--on-accent);
+    box-shadow: 0 14px 45px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+.filter-btn.active {
+    background: var(--gradient-bright);
+    color: var(--on-accent);
+    border-color: transparent;
+}
+
+/* Hero portrait */
+.hero-image {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.15), 0 20px 60px rgba(212, 175, 55, 0.25);
+}
+
+.hero-image-glow {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.35) 0%, rgba(245, 215, 122, 0.1) 45%, transparent 70%);
+}
+
+.video-overlay {
+    background: radial-gradient(circle, rgba(10, 10, 10, 0.45) 0%, rgba(10, 10, 10, 0.92) 90%);
+}
+
+/* Light mode: wash the dark video out to cream so dark text stays readable */
+body.light-mode .video-overlay {
+    background: radial-gradient(circle, rgba(250, 248, 243, 0.82) 0%, rgba(250, 248, 243, 0.96) 85%);
+}
+
+body.light-mode .hero-label,
+body.light-mode .hero-role {
+    color: var(--accent);
+}
+
+body.light-mode .hero-description {
+    color: var(--text-muted);
+}
+
+/* Glowing cards */
+.edu-card,
+.project-card .card-inner,
+.research-item {
+    transition: transform 0.35s var(--easing), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.edu-card:hover,
+.research-item:hover,
+.project-card:hover .card-inner {
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+    transform: translateY(-4px);
+}
+
+.edu-card:hover .edu-tag-pill,
+.skill-tag:hover {
+    border-color: var(--accent);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.research-item .year {
+    color: var(--accent-2);
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 10000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--gradient-bright);
+    color: var(--on-accent);
+    font-weight: 600;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+main:focus {
+    outline: none;
+}
+
+/* Keep anchored sections clear of the fixed navbar */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   PAGE NAVIGATION — one section visible at a time
+   ========================================================================== */
+
+main section[hidden] {
+    display: none !important;
+}
+
+main section:not([hidden]) {
+    animation: page-in 0.45s var(--easing);
+}
+
+@keyframes page-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+}

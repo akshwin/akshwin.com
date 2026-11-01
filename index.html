@@ -58,12 +58,14 @@
 
 <body class="loading">
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- Custom Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
 
   <!-- Loader -->
-  <div class="loader">
+  <div class="loader" aria-hidden="true">
     <div class="loader-text">AKSHWIN T</div>
     <div class="loader-bar">
       <div class="loader-progress"></div>
@@ -71,47 +73,46 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main">
     <div class="nav-left">
-      <a href="#" class="logo">Akshwin T<span class="dot"></span></a>
+      <a href="#home" class="logo">Akshwin T<span class="dot"></span></a>
     </div>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#career" class="nav-link">Career</a>
         <a href="#work" class="nav-link">Work</a>
-        <a href="#research" class="nav-link">Research</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#life" class="nav-link">Life &amp; Contact</a>
       </div>
-      <div class="menu-toggle">
-        <div class="hamburger">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" type="button">
+        <i class="fas fa-sun"></i>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true">
           <span></span>
           <span></span>
-        </div>
-      </div>
+        </span>
+      </button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <div class="mobile-links">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-links" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#career">Career</a>
       <a href="#work">Work</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
-    </div>
+      <a href="#life">Life &amp; Contact</a>
+    </nav>
   </div>
 
   <!-- Main Content -->
-  <main id="smooth-wrapper">
+  <main id="main" tabindex="-1">
     <div id="smooth-content">
 
       <!-- Hero Section -->
-      <section class="hero">
-        <div class="video-container">
+      <section id="home" data-page="home" class="hero">
+        <div class="video-container" aria-hidden="true">
           <video autoplay muted loop playsinline id="hero-video">
             <source src="./assets/videos/hero.mp4" type="video/mp4">
           </video>
@@ -125,27 +126,24 @@
               <div class="title-line"><span class="reveal-text">Akshwin T</span></div>
             </h1>
             <div class="hero-role">
-              <span class="typing-text"></span>
+              <span class="sr-only">AI Engineer and Fitness Enthusiast</span>
+              <span class="typing-text" aria-hidden="true"></span>
             </div>
             <p class="hero-description">
               Building intelligent systems that solve real-world problems through AI, Machine Learning, and innovative
-              research.
+              research. Runner and fitness enthusiast off the keyboard.
             </p>
             <div class="hero-actions">
               <a href="#work" class="btn btn-primary">View My Work</a>
               <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-              <a href="https://drive.google.com/uc?export=download&id=1hr3THK3NecBImLuVINSzDMc9_9RtRedg" target="_blank"
-                class="btn btn-outline" id="resumeBtn">
-                <i class="fas fa-download"></i> Download Resume
-              </a>
             </div>
             <div class="social-links-hero">
-              <a href="https://github.com/akshwin" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/akshwin/" target="_blank" aria-label="LinkedIn"><i
+              <a href="https://github.com/akshwin" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/akshwin/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
                   class="fab fa-linkedin-in"></i></a>
-              <a href="https://x.com/the_akshwin" target="_blank" aria-label="X"><i
+              <a href="https://x.com/the_akshwin" target="_blank" rel="noopener" aria-label="X"><i
                   class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://medium.com/@akshwin" target="_blank" aria-label="Medium"><i
+              <a href="https://medium.com/@akshwin" target="_blank" rel="noopener" aria-label="Medium"><i
                   class="fab fa-medium"></i></a>
             </div>
           </div>
@@ -158,17 +156,14 @@
           </div>
         </div>
 
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" type="button">
-          <i class="fas fa-sun"></i>
-        </button>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
           <span>Scroll</span>
           <div class="line"></div>
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about" class="about section-padding">
+      <section id="about" data-page="home" class="about section-padding">
         <div class="container">
           <div class="ref-grid-wrapper">
 
@@ -197,7 +192,11 @@
                 </p>
                 <p>
                   I have presented AI research at IEEE conferences and have showcased work on AI for detecting
-                  diseases. Beyond academics, I actvely contribute to open-source and research initiatives.
+                  diseases. Beyond academics, I actively contribute to open-source and research initiatives.
+                </p>
+                <p>
+                  Away from the screen, I'm a <strong>runner</strong> and <strong>fitness enthusiast</strong>. I
+                  completed the <strong>TCS World 10K (Virtual) in 2025</strong>.
                 </p>
               </div>
 
@@ -288,131 +287,8 @@
         </div>
       </section>
 
-      <!-- Experience Section -->
-
-      <!-- Education Section -->
-      <!-- Education Section (Redesigned) -->
-      <section id="education" class="education section-padding bg-darker" style="padding-bottom: 0;">
-        <div class="container">
-          <div class="ref-grid-wrapper">
-
-            <!-- Sidebar Title -->
-            <div class="ref-sidebar">
-              <h2 class="ref-title">Education<span class="dot"></span></h2>
-            </div>
-
-
-            <!-- Content -->
-            <div class="education-content">
-              <div class="edu-timeline">
-
-                <!-- Card 1: VIT -->
-                <div class="edu-card">
-                  <div class="edu-header">
-                    <img loading="lazy" src="./assets/images/vit.webp" alt="VIT Logo" class="edu-logo">
-                    <div class="edu-info">
-                      <div class="edu-degree">B.Tech · Computer Science & Engineering</div>
-                      <div class="edu-institution">Vellore Institute of Technology, Vellore</div>
-                      <div class="edu-duration">2021 - 2025 · Vellore, India</div>
-                    </div>
-                    <div class="edu-score">
-                      <span class="score-val">9.04</span>
-                      <span class="score-label">CGPA</span>
-                    </div>
-                  </div>
-
-                  <div class="edu-tags">
-                    <span class="edu-tag-pill"><i class="fas fa-brain" style="margin-right: 6px;"></i>Machine
-                      Learning</span>
-                    <span class="edu-tag-pill"><i class="fas fa-eye" style="margin-right: 6px;"></i>Deep Learning</span>
-                    <span class="edu-tag-pill"><i class="fas fa-robot" style="margin-right: 6px;"></i>Artificial
-                      Intelligence</span>
-                  </div>
-
-                  <div class="edu-achievements">
-                    <ul>
-                      <li>Ranked in top percentile with 9.04 CGPA</li>
-                      <li>Published multiple research papers in IEEE conferences and conferences</li>
-                      <li>Served as Secretary of Energy and Environment Protection Club, VIT,Vellore</li>
-                    </ul>
-                  </div>
-
-                  <div style="margin-top: 20px;">
-                    <a href="https://vit.ac.in" target="_blank"
-                      style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Institute →</a>
-                  </div>
-                </div>
-
-                <!-- Card 2: Amrita -->
-                <div class="edu-card">
-                  <div class="edu-header">
-                    <img loading="lazy" src="./assets/images/amrita.jpeg" alt="Amrita Logo" class="edu-logo">
-                    <div class="edu-info">
-                      <div class="edu-degree">Higher Secondary (XII)</div>
-                      <div class="edu-institution">Amrita Vidyalayam, Kanyakumari</div>
-                      <div class="edu-duration">2020 - 2021 · Kanyakumari, India</div>
-                    </div>
-                    <div class="edu-score">
-                      <span class="score-val">95.8</span>
-                      <span class="score-label">%</span>
-                    </div>
-                  </div>
-
-                  <div class="edu-tags">
-                    <span class="edu-tag-pill">Physics</span>
-                    <span class="edu-tag-pill">Chemistry</span>
-                    <span class="edu-tag-pill">Maths</span>
-                    <span class="edu-tag-pill">Computer Science</span>
-                  </div>
-
-                  <div class="edu-achievements">
-                    <ul>
-                      <li>Ranked 2nd in school in the Board Exams.</li>
-                      <li>Highly commendable academic performance by scoring the top scores in Chemistry,Physics and
-                        Mathematics.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Card 3: Vivekananda -->
-                <div class="edu-card">
-                  <div class="edu-header">
-                    <img loading="lazy" src="./assets/images/vkv.webp" alt="Vivekananda Logo" class="edu-logo">
-                    <div class="edu-info">
-                      <div class="edu-degree">Secondary School (X)</div>
-                      <div class="edu-institution">Vivekananda Kendra Vidyalaya</div>
-                      <div class="edu-duration">2018 - 2019 · Kanyakumari, India</div>
-                    </div>
-                    <div class="edu-score">
-                      <span class="score-val">95.4</span>
-                      <span class="score-label">%</span>
-                    </div>
-                  </div>
-
-                  <div class="edu-tags">
-                    <span class="edu-tag-pill"><i class="fas fa-microscope"
-                        style="margin-right: 6px;"></i>Science</span>
-                    <span class="edu-tag-pill"><i class="fas fa-square-root-alt"
-                        style="margin-right: 6px;"></i>Mathematics</span>
-                    <span class="edu-tag-pill"><i class="fas fa-book" style="margin-right: 6px;"></i>English</span>
-                  </div>
-
-                  <div class="edu-achievements">
-                    <ul>
-                      <li><strong>School Topper</strong> in Class 10 Board Exams.</li>
-                      <li>Demonstrated excellence in core subjects with 95.4%.</li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Experience Section (Redesigned) -->
-      <section id="experience" class="experience section-padding bg-darker">
+      <section id="experience" data-page="career" class="experience section-padding bg-darker">
         <div class="container">
           <div class="ref-grid-wrapper">
 
@@ -430,7 +306,7 @@
                   <div class="edu-header">
                     <img loading="lazy" src="./assets/images/intain.png" alt="Intain Logo" class="edu-logo">
                     <div class="edu-info">
-                      <div class="edu-degree">R&D Engineer (AI/ML)</div>
+                      <h3 class="edu-degree">R&D Engineer (AI/ML)</h3>
                       <div class="edu-institution">Intain Technologies</div>
                       <div class="edu-duration">Aug 2025 - Present</div>
                     </div>
@@ -455,7 +331,7 @@
                   </div>
 
                   <div style="margin-top: 20px;">
-                    <a href="https://intainft.com" target="_blank"
+                    <a href="https://intainft.com" target="_blank" rel="noopener"
                       style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Company →</a>
                   </div>
                 </div>
@@ -465,7 +341,7 @@
                   <div class="edu-header">
                     <img loading="lazy" src="./assets/images/kuppi.jpeg" alt="KuppiSmart Logo" class="edu-logo">
                     <div class="edu-info">
-                      <div class="edu-degree">AI/ML Intern</div>
+                      <h3 class="edu-degree">AI/ML Intern</h3>
                       <div class="edu-institution">KuppiSmart Solutions</div>
                       <div class="edu-duration">Jun 2024 - Jul 2024</div>
                     </div>
@@ -486,7 +362,7 @@
                       </li>
                     </ul>
                     <div style="margin-top: 20px;">
-                      <a href="https://www.kuppismart.com/" target="_blank"
+                      <a href="https://www.kuppismart.com/" target="_blank" rel="noopener"
                         style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Company →</a>
                     </div>
                   </div>
@@ -498,7 +374,7 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="work" class="work section-padding">
+      <section id="work" data-page="work" class="work section-padding">
         <div class="container">
           <div class="ref-grid-wrapper">
 
@@ -534,7 +410,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="brain-tumor">View Details</button>
-                        <a href="https://brain-tumor-classifiers.streamlit.app/" target="_blank" class="btn-arrow">View
+                        <a href="https://brain-tumor-classifiers.streamlit.app/" target="_blank" rel="noopener" class="btn-arrow">View
                           Project <i class="bi bi-arrow-up-right"></i></a>
                       </div>
                     </div>
@@ -555,7 +431,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="lane-detection">View Details</button>
-                        <a href="https://lane-detection-cascaded-unet.streamlit.app/" target="_blank"
+                        <a href="https://lane-detection-cascaded-unet.streamlit.app/" target="_blank" rel="noopener"
                           class="btn-arrow">View
                           Project <i class="bi bi-arrow-up-right"></i></a>
                       </div>
@@ -577,7 +453,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="ich-detector">View Details</button>
-                        <a href="https://intracranial-hemorrhage-detector.streamlit.app/" target="_blank"
+                        <a href="https://intracranial-hemorrhage-detector.streamlit.app/" target="_blank" rel="noopener"
                           class="btn-arrow">View Project <i class="bi bi-arrow-up-right"></i></a>
                       </div>
                     </div>
@@ -598,7 +474,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="storm-predictor">View Details</button>
-                        <a href="https://dst-predictor.streamlit.app/" target="_blank" class="btn-arrow">View Project <i
+                        <a href="https://dst-predictor.streamlit.app/" target="_blank" rel="noopener" class="btn-arrow">View Project <i
                             class="bi bi-arrow-up-right"></i></a>
                       </div>
                     </div>
@@ -619,7 +495,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="tb-detector">View Details</button>
-                        <a href="https://tuberculosis-detector.streamlit.app/" target="_blank" class="btn-arrow">View
+                        <a href="https://tuberculosis-detector.streamlit.app/" target="_blank" rel="noopener" class="btn-arrow">View
                           Project <i class="bi bi-arrow-up-right"></i></a>
                       </div>
                     </div>
@@ -640,7 +516,7 @@
                       </div>
                       <div class="card-actions">
                         <button class="btn-view-details" data-project="alzheimers">View Details</button>
-                        <a href="https://alzheimer-stage-classifier.streamlit.app/" target="_blank"
+                        <a href="https://alzheimer-stage-classifier.streamlit.app/" target="_blank" rel="noopener"
                           class="btn-arrow">View
                           Project <i class="bi bi-arrow-up-right"></i></a>
                       </div>
@@ -654,7 +530,7 @@
       </section>
 
       <!-- Research & Publications -->
-      <section id="research" class="research section-padding bg-darker">
+      <section id="research" data-page="work" class="research section-padding bg-darker">
         <div class="container">
           <div class="ref-grid-wrapper">
 
@@ -675,9 +551,8 @@
                     <p>Inventor of a Quadratic Neuron System for Geomagnetic Storm Prediction that achieves
                       state-of-the-art accuracy (RMSE: 2.88 nT) while remaining computationally efficient.The system
                       enables reliable 1–6 hour storm intensity forecasts, improving protection of power grids,
-                      satellites, and GPS infrastructure from severe space weather.Inventor of a Quadratic Neuron System
-                      for Geomagneti</p>
-                    <a href="https://iprsearch.ipindia.gov.in/publicsearch" target="_blank" class="link-hover">View
+                      satellites, and GPS infrastructure from severe space weather.</p>
+                    <a href="https://iprsearch.ipindia.gov.in/publicsearch" target="_blank" rel="noopener" class="link-hover">View
                       Patent</a>
                   </div>
                 </div>
@@ -689,7 +564,7 @@
                     <h3>Malware Classification Using Machine Learning and Deep Learning: A Comprehensive Approach</h3>
                     <p>A comprehensive research paper published in Cureus Journal of Computer Science </p>
                     <a href="https://www.cureusjournals.com/articles/5024-malware-classification-using-machine-learning-and-deep-learning-a-comprehensive-approach#!/"
-                      target="_blank" class="link-hover">Read Paper</a>
+                      target="_blank" rel="noopener" class="link-hover">Read Paper</a>
                   </div>
                 </div>
 
@@ -699,8 +574,8 @@
                   <div class="details">
                     <h3>Cascaded Dual U-Net (CD-UNet) Approach for Lane Detection in Autonomous Driving</h3>
                     <p>Presented the paper in IEEE INC4 Conference 2025 and published in IEEE Xplore.</p>
-                    <a href="https://ieeexplore.ieee.org/document/11256278" target="_blank" class="link-hover">Read
-                      Blog</a>
+                    <a href="https://ieeexplore.ieee.org/document/11256278" target="_blank" rel="noopener" class="link-hover">Read
+                      Paper</a>
                   </div>
                 </div>
 
@@ -711,7 +586,7 @@
                     <h3>TB-ENSEMBLEX: An Ensemble-Based Transfer Learning Approach to Detect Tuberculosis from Chest
                       X-Ray Images</h3>
                     <p>Presented the paper in IEEE INDISCON Conference 2025 and published in IEEE Xplore.</p>
-                    <a href="https://ieeexplore.ieee.org/document/11251929" target="_blank" class="link-hover">Read
+                    <a href="https://ieeexplore.ieee.org/document/11251929" target="_blank" rel="noopener" class="link-hover">Read
                       Paper</a>
                   </div>
                 </div>
@@ -723,7 +598,7 @@
                     <h3>Comparative Analysis of CNN Architectures With Transfer Learning for Brain Tumor Detection and
                       Classification From MRI Scans</h3>
                     <p>Presented the paper in Icon-BCHIT 2024 and published in IEEE Xplore. </p>
-                    <a href="https://ieeexplore.ieee.org/document/10882199" target="_blank" class="link-hover">Read
+                    <a href="https://ieeexplore.ieee.org/document/10882199" target="_blank" rel="noopener" class="link-hover">Read
                       Paper</a>
                   </div>
                 </div>
@@ -735,18 +610,7 @@
                     <h3>Artificial Intelligence in the Helm of Space Exploration and Discovery</h3>
                     <p>A publication by L Ordine Nuovo. Insights on AI's role in the future of discovery.</p>
                     <a href="https://www.researchgate.net/publication/390756009_Artificial_Intelligence_in_the_Helm_of_Space_Exploration_and_Discovery"
-                      target="_blank" class="link-hover">Read Book</a>
-                  </div>
-                </div>
-
-                <!-- 7. Cross Disciplinary Views (Book Chapter) -->
-                <div class="research-item">
-                  <div class="year">2023</div>
-                  <div class="details">
-                    <h3>Computer Specialized Cross-Disciplinary Views on Communication, Life Skills</h3>
-                    <p>Published by L Ordine Nuovo. Insights on Communication and Life Skills.</p>
-                    <a href="https://www.researchgate.net/publicatizon/372288244_Computer_Specialized_Cross_Disciplinary_Views_on_Communication_and_Life_Skills"
-                      target="_blank" class="link-hover">Read Book</a>
+                      target="_blank" rel="noopener" class="link-hover">Read Book</a>
                   </div>
                 </div>
               </div>
@@ -756,9 +620,130 @@
       </section>
 
 
+      <!-- Education Section -->
+      <!-- Education Section (Redesigned) -->
+      <section id="education" data-page="career" class="education section-padding ">
+        <div class="container">
+          <div class="ref-grid-wrapper">
+
+            <!-- Sidebar Title -->
+            <div class="ref-sidebar">
+              <h2 class="ref-title">Education<span class="dot"></span></h2>
+            </div>
+
+
+            <!-- Content -->
+            <div class="education-content">
+              <div class="edu-timeline">
+
+                <!-- Card 1: VIT -->
+                <div class="edu-card">
+                  <div class="edu-header">
+                    <img loading="lazy" src="./assets/images/vit.webp" alt="VIT Logo" class="edu-logo">
+                    <div class="edu-info">
+                      <h3 class="edu-degree">B.Tech · Computer Science & Engineering</h3>
+                      <div class="edu-institution">Vellore Institute of Technology, Vellore</div>
+                      <div class="edu-duration">2021 - 2025 · Vellore, India</div>
+                    </div>
+                    <div class="edu-score">
+                      <span class="score-val">9.04</span>
+                      <span class="score-label">CGPA</span>
+                    </div>
+                  </div>
+
+                  <div class="edu-tags">
+                    <span class="edu-tag-pill"><i class="fas fa-brain" style="margin-right: 6px;"></i>Machine
+                      Learning</span>
+                    <span class="edu-tag-pill"><i class="fas fa-eye" style="margin-right: 6px;"></i>Deep Learning</span>
+                    <span class="edu-tag-pill"><i class="fas fa-robot" style="margin-right: 6px;"></i>Artificial
+                      Intelligence</span>
+                  </div>
+
+                  <div class="edu-achievements">
+                    <ul>
+                      <li>Ranked in top percentile with 9.04 CGPA</li>
+                      <li>Published multiple research papers in IEEE conferences and conferences</li>
+                      <li>Served as Secretary of Energy and Environment Protection Club, VIT,Vellore</li>
+                    </ul>
+                  </div>
+
+                  <div style="margin-top: 20px;">
+                    <a href="https://vit.ac.in" target="_blank" rel="noopener"
+                      style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Institute →</a>
+                  </div>
+                </div>
+
+                <!-- Card 2: Amrita -->
+                <div class="edu-card">
+                  <div class="edu-header">
+                    <img loading="lazy" src="./assets/images/amrita.jpeg" alt="Amrita Logo" class="edu-logo">
+                    <div class="edu-info">
+                      <h3 class="edu-degree">Higher Secondary (XII)</h3>
+                      <div class="edu-institution">Amrita Vidyalayam, Kanyakumari</div>
+                      <div class="edu-duration">2020 - 2021 · Kanyakumari, India</div>
+                    </div>
+                    <div class="edu-score">
+                      <span class="score-val">95.8</span>
+                      <span class="score-label">%</span>
+                    </div>
+                  </div>
+
+                  <div class="edu-tags">
+                    <span class="edu-tag-pill">Physics</span>
+                    <span class="edu-tag-pill">Chemistry</span>
+                    <span class="edu-tag-pill">Maths</span>
+                    <span class="edu-tag-pill">Computer Science</span>
+                  </div>
+
+                  <div class="edu-achievements">
+                    <ul>
+                      <li>Ranked 2nd in school in the Board Exams.</li>
+                      <li>Highly commendable academic performance by scoring the top scores in Chemistry,Physics and
+                        Mathematics.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Card 3: Vivekananda -->
+                <div class="edu-card">
+                  <div class="edu-header">
+                    <img loading="lazy" src="./assets/images/vkv.webp" alt="Vivekananda Logo" class="edu-logo">
+                    <div class="edu-info">
+                      <h3 class="edu-degree">Secondary School (X)</h3>
+                      <div class="edu-institution">Vivekananda Kendra Vidyalaya</div>
+                      <div class="edu-duration">2018 - 2019 · Kanyakumari, India</div>
+                    </div>
+                    <div class="edu-score">
+                      <span class="score-val">95.4</span>
+                      <span class="score-label">%</span>
+                    </div>
+                  </div>
+
+                  <div class="edu-tags">
+                    <span class="edu-tag-pill"><i class="fas fa-microscope"
+                        style="margin-right: 6px;"></i>Science</span>
+                    <span class="edu-tag-pill"><i class="fas fa-square-root-alt"
+                        style="margin-right: 6px;"></i>Mathematics</span>
+                    <span class="edu-tag-pill"><i class="fas fa-book" style="margin-right: 6px;"></i>English</span>
+                  </div>
+
+                  <div class="edu-achievements">
+                    <ul>
+                      <li><strong>School Topper</strong> in Class 10 Board Exams.</li>
+                      <li>Demonstrated excellence in core subjects with 95.4%.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Volunteer Section -->
 
-      <section id="volunteer" class="volunteer section-padding bg-darker">
+      <section id="volunteer" data-page="career" class="volunteer section-padding bg-darker">
         <div class="container">
           <div class="ref-grid-wrapper">
 
@@ -774,9 +759,9 @@
                 <!-- Card 1: Intain -->
                 <div class="edu-card">
                   <div class="edu-header">
-                    <img loading="lazy" src="./assets/images/OpenXHealth.png" alt="Intain Logo" class="edu-logo">
+                    <img loading="lazy" src="./assets/images/OpenXHealth.png" alt="OpenXHealth logo" class="edu-logo">
                     <div class="edu-info">
-                      <div class="edu-degree">Founder</div>
+                      <h3 class="edu-degree">Founder</h3>
                       <div class="edu-institution">OpenXHealth</div>
                       <div class="edu-duration">Aug 2025 - Present</div>
                     </div>
@@ -800,7 +785,7 @@
                   </div>
 
                   <div style="margin-top: 20px;">
-                    <a href="https://openxhealth.github.io/OpenXHealth-site/" target="_blank"
+                    <a href="https://openxhealth.github.io/OpenXHealth-site/" target="_blank" rel="noopener"
                       style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Site →</a>
                   </div>
                 </div>
@@ -810,7 +795,7 @@
                   <div class="edu-header">
                     <img loading="lazy" src="./assets/images/e2pc.jpeg" alt="E2PC Logo" class="edu-logo">
                     <div class="edu-info">
-                      <div class="edu-degree">Secretary</div>
+                      <h3 class="edu-degree">Secretary</h3>
                       <div class="edu-institution">Energy and Environment Protection Club, VIT, Vellore</div>
                       <div class="edu-duration">Jan 2024 - Dec 2024</div>
                     </div>
@@ -832,7 +817,7 @@
                     </ul>
                     <div style="margin-top: 20px;">
                       <a href="https://www.linkedin.com/company/energy-and-environment-club-vit/posts/?feedView=all"
-                        target="_blank" style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Site
+                        target="_blank" rel="noopener" style="color: var(--accent); font-weight: 500; font-size: 0.9rem;">Visit Site
                         →</a>
                     </div>
                   </div>
@@ -840,10 +825,96 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
+      <!-- Beyond Code Section -->
+      <section id="life" data-page="life" class="life section-padding">
+        <div class="container">
+          <div class="ref-grid-wrapper">
+
+            <!-- Sidebar Title -->
+            <div class="ref-sidebar">
+              <h2 class="ref-title">Beyond Code<span class="dot"></span></h2>
+              <p class="subtitle" style="margin-top: 10px; color: var(--text-muted);">Miles, Sweat & Discipline</p>
+            </div>
+
+            <!-- Content -->
+            <div class="about-main-content">
+              <div class="bio-text">
+                <p>
+                  Outside the lab, I'm a <strong>fitness enthusiast</strong> and <strong>runner</strong>. Training
+                  keeps me sharp: the same <strong>consistency</strong>, <strong>patience</strong> and
+                  <strong>discipline</strong> that build endurance also build good models.
+                </p>
+              </div>
+
+              <div class="stats-row">
+                <div class="stat-item">
+                  <span class="stat-number">10K</span>
+                  <span class="stat-label">TCS World 10K</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">2025</span>
+                  <span class="stat-label">Finisher</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number"><i class="fas fa-person-running"></i></span>
+                  <span class="stat-label">Runner</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number"><i class="fas fa-dumbbell"></i></span>
+                  <span class="stat-label">Fitness</span>
+                </div>
+              </div>
+
+              <div class="edu-timeline" style="margin-top: 40px;">
+                <div class="edu-card">
+                  <div class="edu-header">
+                    <div class="edu-info">
+                      <h3 class="edu-degree"><i class="fas fa-medal" style="margin-right: 8px; color: var(--accent);"></i>TCS World 10K Bengaluru (Virtual)</h3>
+                      <div class="edu-institution">10 km Run · Finisher</div>
+                      <div class="edu-duration">2025</div>
+                    </div>
+                  </div>
+                  <div class="edu-tags">
+                    <span class="edu-tag-pill"><i class="fas fa-person-running" style="margin-right: 6px;"></i>Running</span>
+                    <span class="edu-tag-pill"><i class="fas fa-heart-pulse" style="margin-right: 6px;"></i>Endurance</span>
+                    <span class="edu-tag-pill"><i class="fas fa-bullseye" style="margin-right: 6px;"></i>Discipline</span>
+                  </div>
+                  <div class="edu-achievements">
+                    <ul>
+                      <li>Completed the 10 km virtual run of TCS World 10K, one of the world's premier 10K road races.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="edu-card">
+                  <div class="edu-header">
+                    <div class="edu-info">
+                      <h3 class="edu-degree"><i class="fas fa-dumbbell" style="margin-right: 8px; color: var(--accent);"></i>Fitness & Training</h3>
+                      <div class="edu-institution">Strength · Running · Consistency</div>
+                    </div>
+                  </div>
+                  <div class="edu-tags">
+                    <span class="edu-tag-pill"><i class="fas fa-dumbbell" style="margin-right: 6px;"></i>Strength</span>
+                    <span class="edu-tag-pill"><i class="fas fa-road" style="margin-right: 6px;"></i>Distance Running</span>
+                    <span class="edu-tag-pill"><i class="fas fa-seedling" style="margin-right: 6px;"></i>Healthy Living</span>
+                  </div>
+                  <div class="edu-achievements">
+                    <ul>
+                      <li>Fitness is a daily non-negotiable: it fuels focus, energy and resilience at work.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
           <!-- Contact Section -->
-          <section id="contact" class="contact section-padding">
+          <section id="contact" data-page="life" class="contact section-padding">
             <div class="container">
               <div class="ref-grid-wrapper">
 
@@ -883,12 +954,15 @@
                       <i class="fas fa-paper-plane"></i>
                     </button>
 
-                    <div id="formStatus" class="form-status"></div>
+                    <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
                   </form>
                 </div>
               </div>
             </div>
           </section>
+
+    </div>
+  </main>
 
           <!-- Footer -->
           <footer class="footer">
@@ -900,21 +974,21 @@
 
                   <!-- Social Media Icons -->
                   <div class="footer-social-icons">
-                    <a href="https://github.com/akshwin" target="_blank" aria-label="GitHub" class="social-icon-link">
+                    <a href="https://github.com/akshwin" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon-link">
                       <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/akshwin/" target="_blank" aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/in/akshwin/" target="_blank" rel="noopener" aria-label="LinkedIn"
                       class="social-icon-link">
                       <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://x.com/the_akshwin" target="_blank" aria-label="X (Twitter)"
+                    <a href="https://x.com/the_akshwin" target="_blank" rel="noopener" aria-label="X (Twitter)"
                       class="social-icon-link">
                       <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="https://medium.com/@akshwin" target="_blank" aria-label="Medium" class="social-icon-link">
+                    <a href="https://medium.com/@akshwin" target="_blank" rel="noopener" aria-label="Medium" class="social-icon-link">
                       <i class="fab fa-medium"></i>
                     </a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank"
+                    <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank" rel="noopener"
                       aria-label="Google Scholar" class="social-icon-link">
                       <i class="fas fa-graduation-cap"></i>
                     </a>
@@ -924,20 +998,19 @@
                 <div class="footer-links">
                   <div class="footer-section">
                     <h4>Navigate</h4>
-                    <a href="#about">About</a>
-                    <a href="#education">Education</a>
-                    <a href="#experience">Experience</a>
+                    <a href="#home">Home</a>
+                    <a href="#career">Career</a>
                     <a href="#work">Work</a>
-                    <a href="#research">Research</a>
+                    <a href="#life">Life &amp; Contact</a>
                   </div>
 
                   <div class="footer-section">
                     <h4>Connect</h4>
-                    <a href="https://github.com/akshwin" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/akshwin/" target="_blank">LinkedIn</a>
-                    <a href="https://x.com/the_akshwin" target="_blank">X (Twitter)</a>
-                    <a href="https://medium.com/@akshwin" target="_blank">Medium</a>
-                    <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank">Google
+                    <a href="https://github.com/akshwin" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/akshwin/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://x.com/the_akshwin" target="_blank" rel="noopener">X (Twitter)</a>
+                    <a href="https://medium.com/@akshwin" target="_blank" rel="noopener">Medium</a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=7feSZOsAAAAJ" target="_blank" rel="noopener">Google
                       Scholar</a>
                   </div>
 
@@ -996,7 +1069,5 @@
   </script>
   -->
 </body>
-
-</html>
 
 </html>
